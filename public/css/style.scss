@@ -1,0 +1,128 @@
+/*
+* Table of Contents * 
+1. Variables
+    1.1 Colors 
+    1.2 Font Weights
+2. Navigation Bar
+*/
+
+// * Variables *
+
+// Colors
+$darkTextPurple: #4b2073;
+$normalTextPurple: #6c33a0;
+$mainSectionPurple: #fde3ff;
+$lighterSectionPurple: #fff6ff;
+$navBarPurple: #fbc3ff;
+
+// Font Weights
+$thin: 100;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: $mainSectionPurple;
+}
+
+// * Navigation Bar *
+.nav {
+    padding: 1em 0em;
+    background: $navBarPurple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 8vh;
+
+    &__logo {
+        width: 125px;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+
+        li {
+            list-style: none;
+
+            a {
+                font-weight: $regular;
+                color: $normalTextPurple;
+                text-decoration: none;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .menu {
+        font-size: 1.3rem;
+        color: $normalTextPurple;
+        display: none;
+        cursor: pointer;
+        margin-right: 1em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav__links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav {
+        &__links {
+            position: absolute;
+            right: 0;
+            height: 92vh;
+            top: 8vh;
+            background-color: $navBarPurple;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            transform: translateX(100%);
+            transition: transform 500ms ease-in;
+
+            li {
+                opacity: 0;
+                a {
+                    font-weight: $regular;
+                }
+            }
+        }
+
+        .menu {
+            display: block;
+        }
+    }
+
+    ul.nav__links.nav--active {
+        transform: translateX(0%);
+        margin-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
