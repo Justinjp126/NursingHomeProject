@@ -21,6 +21,21 @@
             <div class="menu"><h4>Menu</h4></div>
         </nav>
 
+        <div class="hero">
+            <div class="hero__textContainer">
+                <h2 class="hero__textContainer_title">Nursing Home Mask Initiative</h2>
+                <p class="hero__textContainer_text">Nursing home residents and caretakers need masks. It’s up to <span class="hero__textContainer_text-bold">us</span> to help.</p>
+             </div>
+            <a class="hero__btn" href="#">Learn More</a>
+        </div>
+
+        <div class="arrow">
+            <h4 class="arrow__text">More</h4>
+            <svg viewBox="0 0 65 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="33" y1="32.6985" x2="62.6985" y2="3.00002" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
+                <line x1="2.12132" y1="3" x2="31.8198" y2="32.6985" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
+            </svg>                
+        </div>
         <script src="../js/app.js"></script>
     </body>
 </html>

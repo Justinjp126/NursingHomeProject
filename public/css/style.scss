@@ -3,17 +3,19 @@
 1. Variables
     1.1 Colors 
     1.2 Font Weights
-2. Navigation Bar
+2. Home page
+    2.1 Navigation Bar
+    2.2 Hero 
 */
 
-// * Variables *
+// * Variables * //
 
 // Colors
 $darkTextPurple: #4b2073;
 $normalTextPurple: #6c33a0;
 $mainSectionPurple: #fde3ff;
 $lighterSectionPurple: #fff6ff;
-$navBarPurple: #fbc3ff;
+$navBarPurple: #fde3ff;
 
 // Font Weights
 $thin: 100;
@@ -33,8 +35,10 @@ body {
     background-color: $mainSectionPurple;
 }
 
-// * Navigation Bar *
+// * Navigation Bar * //
 .nav {
+    position: relative;
+    z-index: 9999;
     padding: 1em 0em;
     background: $navBarPurple;
     display: flex;
@@ -72,9 +76,24 @@ body {
     }
 }
 
+@media screen and (min-width: 1275px) {
+    .nav__links {
+        li {
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .nav__links {
         width: 70%;
+        li {
+            a {
+                font-size: 1.3rem;
+            }
+        }
     }
 }
 
@@ -100,6 +119,7 @@ body {
                 opacity: 0;
                 a {
                     font-weight: $regular;
+                    font-size: 1.3rem;
                 }
             }
         }
@@ -124,5 +144,144 @@ body {
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+// * Hero * //
+.hero {
+    z-index: 1;
+    position: relative;
+    margin-top: 1rem;
+    background-image: url("../img/old-women-mask.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 67vh;
+    color: white;
+    text-align: center;
+
+    &__textContainer {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &_title {
+            padding: 1.5rem 1.5rem 0;
+            font-size: 2em;
+        }
+
+        &_text {
+            padding: 1.5rem 1.5rem 0;
+            font-size: 1.5em;
+
+            &-bold {
+                font-weight: $bold;
+            }
+        }
+    }
+    &__btn {
+        display: inline-block;
+        width: 15rem;
+        padding: 0.5rem 0;
+        color: #fff;
+        border: 0.2rem solid white;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 80%;
+        border-radius: 3rem;
+        transition: background-color 200ms ease-out, color 200ms ease-out;
+        font-size: 2.1rem;
+    }
+
+    &__btn:hover,
+    &__btn:focus,
+    &__btn:active {
+        background-color: white;
+        color: $darkTextPurple;
+        transition: background-color 300ms ease-in, color 300ms ease-in;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .hero {
+        height: 69vh;
+
+        &__textContainer {
+            width: 90%;
+
+            &_title {
+                padding: 2rem 1.5rem 0;
+                font-size: 2.4em;
+            }
+
+            &_text {
+                font-size: 1.8em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) {
+    .hero {
+        height: 69vh;
+
+        &__textContainer {
+            width: 78%;
+
+            &_title {
+                padding: 2rem 1.5rem 0;
+                font-size: 2.8em;
+            }
+
+            &_text {
+                font-size: 2.2em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .hero {
+        height: 72vh;
+
+        &__textContainer {
+            width: 55%;
+
+            &_title {
+                padding: 2rem 1.5rem 0;
+                font-size: 3em;
+            }
+
+            &_text {
+                margin: inherit 1.5rem;
+                font-size: 2.4em;
+            }
+        }
+
+        &__btn {
+            width: 20rem;
+            font-size: 2.6rem;
+        }
+    }
+}
+
+// * Arrow * //
+.arrow {
+    width: 4rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 1rem;
+    color: $darkTextPurple;
+
+    &__text {
+        font-weight: $regular;
     }
 }
