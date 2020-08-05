@@ -6,6 +6,9 @@
 2. Home page
     2.1 Navigation Bar
     2.2 Hero 
+    2.3 Our Mission
+    2.4 Get Involved
+    2.5 Footer
 */
 
 // * Variables * //
@@ -24,6 +27,10 @@ $regular: 400;
 $bold: 700;
 $black: 900;
 
+//Other
+$textShadowDark: 0px -7px 0px rgba(251, 210, 255, 0.8);
+$textShadowLight: 0px -7px 0px rgba(251, 210, 255, 0.5);
+
 * {
     padding: 0;
     margin: 0;
@@ -33,6 +40,7 @@ $black: 900;
 body {
     font-family: "Lato", sans-serif;
     background-color: $mainSectionPurple;
+    line-height: 1.5;
 }
 
 // * Navigation Bar * //
@@ -152,7 +160,8 @@ body {
     z-index: 1;
     position: relative;
     margin-top: 1rem;
-    background-image: url("../img/old-women-mask.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/old-women-mask.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -183,7 +192,7 @@ body {
     &__btn {
         display: inline-block;
         width: 15rem;
-        padding: 0.5rem 0;
+        padding: 0.2rem 0;
         color: #fff;
         border: 0.2rem solid white;
         text-align: center;
@@ -273,15 +282,229 @@ body {
 
 // * Arrow * //
 .arrow {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 4rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     margin-top: 1rem;
     color: $darkTextPurple;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    &__text {
+        font-weight: $light;
+        align-self: center;
+    }
+
+    &__svg {
+        align-self: center;
+    }
+}
+
+// * Our Mission * //
+.ourMission {
+    color: $darkTextPurple;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+
+    &__title {
+        padding-top: 2rem;
+        font-size: 2.5rem;
+        font-weight: $black;
+        text-shadow: $textShadowDark;
+    }
 
     &__text {
+        padding-top: 1rem;
+        padding-bottom: 1.5em;
+        font-size: 1.3rem;
         font-weight: $regular;
+    }
+}
+
+@media screen and (min-width: 825px) {
+    .ourMission {
+        width: 80%;
+
+        &__title {
+            font-size: 2.9rem;
+        }
+        &__text {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .ourMission {
+        width: 65%;
+
+        &__title {
+            font-size: 3.3rem;
+        }
+        &__text {
+            font-size: 2rem;
+        }
+    }
+}
+
+// * Get Involved * //
+.getInvolvedTitle {
+    padding-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: $black;
+    text-shadow: $textShadowLight;
+    background: $lighterSectionPurple;
+    text-align: center;
+    color: $darkTextPurple;
+}
+
+.getInvolved {
+    padding-bottom: 2rem;
+    color: $darkTextPurple;
+    background: $lighterSectionPurple;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+
+    &__donate {
+        padding-top: 1rem;
+        margin: 0 auto;
+
+        &_image {
+            width: 12rem;
+        }
+        &_button {
+            display: inline-block;
+            width: 95%;
+            padding: 0.2rem 0;
+            color: #6c33a0;
+            border: 0.2rem solid #6c33a0;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 3rem;
+            transition: background-color 200ms ease-out, color 200ms ease-out,
+                transform 200ms ease-out;
+            font-size: 2.1rem;
+            background: none;
+            margin-top: 0.5rem;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(0px);
+        }
+
+        &_button:hover,
+        &_button:focus,
+        &_button:active {
+            background-color: $normalTextPurple;
+            color: $lighterSectionPurple;
+            transition: background-color 300ms ease-in, color 300ms ease-in,
+                transform 300ms ease-in;
+            transform: translateY(-0.2rem);
+        }
+    }
+
+    &__sew {
+        padding-top: 1rem;
+        margin: 0 auto;
+
+        &_image {
+            width: 12rem;
+        }
+
+        &_button {
+            display: inline-block;
+            width: 95%;
+            padding: 0.2rem 0;
+            color: #6c33a0;
+            border: 0.2rem solid #6c33a0;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 3rem;
+            transition: background-color 200ms ease-out, color 200ms ease-out,
+                transform 200ms ease-out;
+            font-size: 2.1rem;
+            background: none;
+            margin-top: 0.5rem;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(0px);
+        }
+
+        &_button:hover,
+        &_button:focus,
+        &_button:active {
+            background-color: $normalTextPurple;
+            color: $lighterSectionPurple;
+            transition: background-color 300ms ease-in, color 300ms ease-in,
+                transform 300ms ease-in;
+            transform: translateY(-0.2rem);
+        }
+    }
+
+    &__learn {
+        padding-top: 2em;
+        margin: 0 auto;
+
+        &_image {
+            width: 12rem;
+        }
+
+        &_button {
+            display: inline-block;
+            width: 95%;
+            padding: 0.2rem 0;
+            color: #6c33a0;
+            border: 0.2rem solid #6c33a0;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 3rem;
+            transition: background-color 200ms ease-out, color 200ms ease-out,
+                transform 200ms ease-out;
+            font-size: 2.1rem;
+            background: none;
+            margin-top: 0.5rem;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(0px);
+        }
+
+        &_button:hover,
+        &_button:focus,
+        &_button:active {
+            background-color: $normalTextPurple;
+            color: $lighterSectionPurple;
+            transition: background-color 300ms ease-in, color 300ms ease-in,
+                transform 300ms ease-in;
+            transform: translateY(-0.2rem);
+        }
+    }
+}
+
+@media screen and (min-width: 825px) {
+    .getInvolvedTitle {
+        font-size: 2.9rem;
+    }
+    .getInvolved {
+        flex-direction: row;
+    }
+    .getInvolved__learn {
+        padding-top: 1em;
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .getInvolvedTitle {
+        font-size: 3.4rem;
     }
 }

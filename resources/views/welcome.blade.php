@@ -20,22 +20,51 @@
             </ul>
             <div class="menu"><h4>Menu</h4></div>
         </nav>
+        <main class="main-home">
+            <div class="hero">
+                <div class="hero__textContainer">
+                    <h2 class="hero__textContainer_title">Nursing Home Mask Initiative</h2>
+                    <p class="hero__textContainer_text">Nursing home residents and caretakers need masks. It’s up to <span class="hero__textContainer_text-bold">us</span> to help.</p>
+                </div>
+                <a class="hero__btn" href="#">Learn More</a>
+            </div>
 
-        <div class="hero">
-            <div class="hero__textContainer">
-                <h2 class="hero__textContainer_title">Nursing Home Mask Initiative</h2>
-                <p class="hero__textContainer_text">Nursing home residents and caretakers need masks. It’s up to <span class="hero__textContainer_text-bold">us</span> to help.</p>
-             </div>
-            <a class="hero__btn" href="#">Learn More</a>
-        </div>
+            <div class="arrow">
+                <h4 class="arrow__text">More</h4>
+                <svg class="arrow__svg" viewBox="0 0 65 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="33" y1="32.6985" x2="62.6985" y2="3.00002" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="2.12132" y1="3" x2="31.8198" y2="32.6985" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
+                </svg>                
+            </div>
 
-        <div class="arrow">
-            <h4 class="arrow__text">More</h4>
-            <svg viewBox="0 0 65 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="33" y1="32.6985" x2="62.6985" y2="3.00002" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
-                <line x1="2.12132" y1="3" x2="31.8198" y2="32.6985" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
-            </svg>                
-        </div>
+            <div class="ourMission">
+                <div class="ourMission__title">Our Mission</div>
+                <div class="ourMission__text">We want to save lives by helping crafters and sewers like you to make masks for nursing homes and personal care facilities in need.</div>
+            </div>
+
+            <h1 class="getInvolvedTitle">Get Involved</h1>
+
+            <div class="getInvolved">
+                <div class="getInvolved__donate">
+                    <div class="getInvolved__donate_image">
+                        <img src="../svg/donate.svg" alt="Piggy Bank">
+                    </div>
+                    <button class="getInvolved__donate_button">Donate</button>
+                </div>
+                <div class="getInvolved__sew">
+                    <div class="getInvolved__sew_image">
+                        <img src="../svg/sew.svg" alt="Sewing Machine">
+                    </div>
+                    <button class="getInvolved__sew_button">Sew</button>
+                </div>
+                <div class="getInvolved__learn">
+                    <div class="getInvolved__learn_image">
+                        <img src="../svg/learn.svg" alt="Brain">
+                    </div>
+                    <button class="getInvolved__learn_button">Learn</button>
+                </div>
+            </div>
+        </main>
         <script src="../js/app.js"></script>
     </body>
 </html>
