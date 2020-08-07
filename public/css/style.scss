@@ -14,6 +14,7 @@
 // * Variables * //
 
 // Colors
+$darkerTextPurple: #411c63;
 $darkTextPurple: #4b2073;
 $normalTextPurple: #6c33a0;
 $mainSectionPurple: #fde3ff;
@@ -30,7 +31,8 @@ $black: 900;
 //Other
 $textShadowDark: 0px -7px 0px rgba(251, 210, 255, 0.8);
 $textShadowLight: 0px -7px 0px rgba(251, 210, 255, 0.5);
-
+$svgFilter: invert(15%) sepia(16%) saturate(6307%) hue-rotate(249deg)
+    brightness(94%) contrast(101%);
 * {
     padding: 0;
     margin: 0;
@@ -42,6 +44,10 @@ body {
     background-color: $mainSectionPurple;
     line-height: 1.5;
 }
+
+// ! --------- ! //
+// ! HOME PAGE ! //
+// ! --------- ! //
 
 // * Navigation Bar * //
 .nav {
@@ -304,6 +310,7 @@ body {
     }
 }
 
+//TODO Fix this media querys not working
 // * Our Mission * //
 .ourMission {
     color: $darkTextPurple;
@@ -319,35 +326,39 @@ body {
     }
 
     &__text {
-        padding-top: 1rem;
-        padding-bottom: 1.5em;
+        padding-top: 0.4rem;
+        padding-bottom: 1em;
         font-size: 1.3rem;
         font-weight: $regular;
     }
 }
 
 @media screen and (min-width: 825px) {
-    .ourMission {
-        width: 80%;
+    .main-home {
+        .ourMission {
+            width: 80%;
 
-        &__title {
-            font-size: 2.9rem;
-        }
-        &__text {
-            font-size: 1.7rem;
+            &__title {
+                font-size: 2.9rem;
+            }
+            &__text {
+                font-size: 1.7rem;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1275px) {
-    .ourMission {
-        width: 65%;
+    .main-home {
+        .ourMission {
+            width: 65%;
 
-        &__title {
-            font-size: 3.3rem;
-        }
-        &__text {
-            font-size: 2rem;
+            &__title {
+                font-size: 3.3rem;
+            }
+            &__text {
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -379,7 +390,8 @@ body {
         margin: 0 auto;
 
         &_image {
-            width: 12rem;
+            filter: $svgFilter;
+            width: 11rem;
         }
         &_button {
             display: inline-block;
@@ -417,7 +429,8 @@ body {
         margin: 0 auto;
 
         &_image {
-            width: 12rem;
+            filter: $svgFilter;
+            width: 11rem;
         }
 
         &_button {
@@ -456,7 +469,8 @@ body {
         margin: 0 auto;
 
         &_image {
-            width: 12rem;
+            filter: $svgFilter;
+            width: 11rem;
         }
 
         &_button {
@@ -506,5 +520,123 @@ body {
 @media screen and (min-width: 1275px) {
     .getInvolvedTitle {
         font-size: 3.4rem;
+    }
+}
+
+// * Footer * //
+.footer {
+    padding-top: 1rem;
+    text-align: center;
+    color: $darkerTextPurple;
+    background-color: $lighterSectionPurple;
+    &__title {
+        font-size: 2rem;
+    }
+    &__svg {
+        display: flex;
+        justify-content: center;
+        &_instagram {
+            filter: $svgFilter;
+            width: 4rem;
+            margin: 1.5em;
+            transform: translateY(0);
+            transition: transform 100ms ease-in;
+        }
+        &_twitter {
+            filter: $svgFilter;
+            width: 4rem;
+            margin: 1.5em;
+            transform: translateY(0);
+            transition: transform 100ms ease-in;
+        }
+        &_facebook {
+            filter: $svgFilter;
+            width: 4rem;
+            margin: 1.5em;
+            transform: translateY(0) scale(1);
+            transition: transform 100ms ease-in;
+        }
+
+        &_instagram:hover,
+        &_instagram:focus,
+        &_twitter:hover,
+        &_twitter:focus,
+        &_facebook:hover,
+        &_facebook:focus {
+            transform: translateY(-0.2rem) scale(1.1);
+            transition: transform 150ms ease-out;
+        }
+    }
+}
+
+// ! ---------- ! //
+// ! ABOUT PAGE ! //
+// ! ---------- ! //
+
+// * About Us * //
+.aboutUs {
+    color: $darkTextPurple;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "text";
+    place-items: center center;
+    padding-bottom: 1.5rem;
+    grid-column-gap: 2.5rem;
+    &__title {
+        grid-area: title;
+        font-size: 2.5rem;
+        font-weight: $black;
+        text-shadow: $textShadowDark;
+    }
+
+    &__text {
+        padding-top: 0.2rem;
+        grid-area: text;
+        font-size: 1.3rem;
+        font-weight: $regular;
+    }
+
+    &__image {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 825px) {
+    .main-about {
+        .aboutUs {
+            width: 80%;
+
+            &__title {
+                font-size: 2.9rem;
+            }
+            &__text {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-about {
+        .aboutUs {
+            grid-template-areas:
+                "title image"
+                "text image";
+
+            &__title {
+                font-size: 3.1rem;
+            }
+            &__image {
+                grid-area: image;
+                width: 20rem;
+                border-radius: 1rem;
+                grid-area: image;
+                display: block;
+            }
+        }
     }
 }

@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/style.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
-        <title>Home</title>
-    </head>
-    <body>
-        <nav class="nav">
-            <img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo">
-            <ul class="nav__links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Participate</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Donate</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="menu"><h4>Menu</h4></div>
-        </nav>
-        <main class="main-home">
-            <div class="hero">
-                <div class="hero__textContainer">
-                    <h2 class="hero__textContainer_title">Nursing Home Mask Initiative</h2>
-                    <p class="hero__textContainer_text">Nursing home residents and caretakers need masks. It’s up to <span class="hero__textContainer_text-bold">us</span> to help.</p>
-                </div>
-                <a class="hero__btn" href="#">Learn More</a>
-            </div>
 
-            <div class="arrow">
-                <h4 class="arrow__text">More</h4>
-                <svg class="arrow__svg" viewBox="0 0 65 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="33" y1="32.6985" x2="62.6985" y2="3.00002" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="2.12132" y1="3" x2="31.8198" y2="32.6985" stroke="#4B2073" stroke-width="3" stroke-linecap="round"/>
-                </svg>                
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Home</title>
+</head>
 
-            <div class="ourMission">
-                <div class="ourMission__title">Our Mission</div>
-                <div class="ourMission__text">We want to save lives by helping crafters and sewers like you to make masks for nursing homes and personal care facilities in need.</div>
+<body>
+    <nav class="nav">
+        <img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo">
+        <ul class="nav__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/participate">Participate</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/donate">Donate</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="menu">
+            <h4>Menu</h4>
+        </div>
+    </nav>
+    <main class="main-home">
+        <div class="hero">
+            <div class="hero__textContainer">
+                <h2 class="hero__textContainer_title">Nursing Home Mask Initiative</h2>
+                <p class="hero__textContainer_text">Nursing home residents and caretakers need masks. It’s up to <span
+                        class="hero__textContainer_text-bold">us</span> to help.</p>
             </div>
+            <a class="hero__btn" href="#">Learn More</a>
+        </div>
 
-            <h1 class="getInvolvedTitle">Get Involved</h1>
+        <div class="arrow">
+            <h4 class="arrow__text">More</h4>
+            <svg class="arrow__svg" viewBox="0 0 65 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="33" y1="32.6985" x2="62.6985" y2="3.00002" stroke="#4B2073" stroke-width="3"
+                    stroke-linecap="round" />
+                <line x1="2.12132" y1="3" x2="31.8198" y2="32.6985" stroke="#4B2073" stroke-width="3"
+                    stroke-linecap="round" />
+            </svg>
+        </div>
 
-            <div class="getInvolved">
-                <div class="getInvolved__donate">
-                    <div class="getInvolved__donate_image">
-                        <img src="../svg/donate.svg" alt="Piggy Bank">
-                    </div>
-                    <button class="getInvolved__donate_button">Donate</button>
+        <div class="ourMission">
+            <div class="ourMission__title">Our Mission</div>
+            <div class="ourMission__text">We want to save lives by helping crafters and sewers like you to make masks
+                for nursing homes and personal care facilities in need.</div>
+        </div>
+
+        <h1 class="getInvolvedTitle">Get Involved</h1>
+        <div class="getInvolved">
+            <div class="getInvolved__donate">
+                <div class="getInvolved__donate_image">
+                    <img src="../svg/donate.svg" alt="Piggy Bank">
                 </div>
-                <div class="getInvolved__sew">
-                    <div class="getInvolved__sew_image">
-                        <img src="../svg/sew.svg" alt="Sewing Machine">
-                    </div>
-                    <button class="getInvolved__sew_button">Sew</button>
-                </div>
-                <div class="getInvolved__learn">
-                    <div class="getInvolved__learn_image">
-                        <img src="../svg/learn.svg" alt="Brain">
-                    </div>
-                    <button class="getInvolved__learn_button">Learn</button>
-                </div>
+                <button class="getInvolved__donate_button">Donate</button>
             </div>
-        </main>
-        <script src="../js/app.js"></script>
-    </body>
+            <div class="getInvolved__sew">
+                <div class="getInvolved__sew_image">
+                    <img src="../svg/sew.svg" alt="Sewing Machine">
+                </div>
+                <button class="getInvolved__sew_button">Sew</button>
+            </div>
+            <div class="getInvolved__learn">
+                <div class="getInvolved__learn_image">
+                    <img src="../svg/learn.svg" alt="Brain">
+                </div>
+                <button class="getInvolved__learn_button">Learn</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
+            <div class="footer__svg">
+                <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footer__svg_instagram"></a>
+                <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footer__svg_twitter"></a>
+                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footer__svg_facebook"></a>
+            </div>
+        </footer>
+    </main>
+    <script src="../js/app.js"></script>
+</body>
+
 </html>
