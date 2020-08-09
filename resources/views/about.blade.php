@@ -40,6 +40,64 @@
             <img class="aboutUs__image" src="../img/masksLarge.png" alt="Sewing Machine Large">
         </div>
 
+        <div class="container">
+            <div class="ourTeam">
+                <div class="ourTeam__title">Our Team</div>
+                <div class="ourTeam__person">
+                    <div class="ourTeam__person_container">
+                        <img class="ourTeam__person_container-svg" src="../svg/lydia.svg" id="lydiaSvg">
+                        <div class="ourTeam__person_container-title">Lydia Berger
+                            <div class="ourTeam__person_container-title-school">Rising Senior at
+                                Norwin High School</div>
+                        </div>
+
+                    </div>
+                    <div class="ourTeam__person_paragraph">Before this project, Lydia’s primary programming experience
+                        was in
+                        Python and Haskell. However, after the COVID-19 crisis began, she decided to learn HTML and CSS
+                        to
+                        create the original site and make a difference. She met Amish Sethi through the Pittsburgh
+                        COVID-19
+                        DataWorks Project, and they decided to team up to work on the project. Her goal is to help
+                        nursing
+                        homes in the Pittsburgh area and beyond.</div>
+                </div>
+                <div class="ourTeam__person">
+                    <div class="ourTeam__person_container">
+                        <img class="ourTeam__person_container-svg" src="../svg/amish.svg" id="amishSvg">
+                        <div class="ourTeam__person_container-title">Amish Sethi<div
+                                class="ourTeam__person_container-title-school">Rising Junior at
+                                Pine-Richland High School</div>
+                        </div>
+
+                    </div>
+                    <div class="ourTeam__person_paragraph">Amish has been coding since he was nine and has a passion for
+                        using his coding knowledge to good use. He met Lydia during the Pittsburgh Covid-19
+                        DataWorks
+                        Project, an online and collaborative data science project hosted by the University of
+                        Pittsburgh.
+                        After meeting, they decided to work together to help nursing homes in the Pittsburgh area.</div>
+                </div>
+                <div class="ourTeam__person">
+                    <div class="ourTeam__person_container">
+                        <img class="ourTeam__person_container-svg" src="../svg/justin.svg" id="justinSvg">
+                        <div class="ourTeam__person_container-title">Justin
+                            Puthenpurayil
+                            <div class="ourTeam__person_container-title-school">Rising Junior at
+                                Pine-Richland High School</div>
+                        </div>
+
+                    </div>
+                    <div class="ourTeam__person_paragraph">Justin learned how to write HTML and CSS in his freshman year
+                        of
+                        high school. He was brought in to work on this project by his friend Amish, and he has been
+                        helping
+                        revamp the original website created Lydia. He hopes to see this website help nursing homes get
+                        masks
+                        and become a better web developer through this project. </div>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
             <div class="footer__svg">

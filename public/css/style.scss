@@ -30,7 +30,7 @@ $black: 900;
 
 //Other
 $textShadowDark: 0px -7px 0px rgba(251, 210, 255, 0.8);
-$textShadowLight: 0px -7px 0px rgba(251, 210, 255, 0.5);
+$textShadowLight: 0px -7px 0px rgba(251, 210, 255, 0.4);
 $svgFilter: invert(15%) sepia(16%) saturate(6307%) hue-rotate(249deg)
     brightness(94%) contrast(101%);
 * {
@@ -584,9 +584,10 @@ body {
         "title"
         "text";
     place-items: center center;
-    padding-bottom: 1.5rem;
+    padding: 2rem 0;
     grid-column-gap: 2.5rem;
     &__title {
+        margin-bottom: 0.5rem;
         grid-area: title;
         font-size: 2.5rem;
         font-weight: $black;
@@ -636,7 +637,151 @@ body {
                 border-radius: 1rem;
                 grid-area: image;
                 display: block;
+                margin-left: 1rem;
             }
         }
+    }
+}
+
+// * Our Team * //
+.container {
+    background-color: $lighterSectionPurple;
+}
+.ourTeam {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    color: $darkTextPurple;
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: $black;
+        text-shadow: $textShadowLight;
+        text-align: center;
+    }
+
+    &__person {
+        padding-bottom: 2.5rem;
+        &_container {
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+
+            &-title {
+                font-weight: $bold;
+                font-size: 1.5rem;
+
+                &-school {
+                    padding-top: 0.2rem;
+                    font-weight: $regular;
+                    font-size: 1.1rem;
+                    color: $normalTextPurple;
+                }
+            }
+        }
+        &_paragraph {
+            padding-top: 0.7rem;
+        }
+    }
+}
+
+#lydiaSvg {
+    width: 9rem;
+    margin-left: 0.5rem;
+    margin-right: 10%;
+}
+
+#amishSvg {
+    width: 9rem;
+    margin-left: 0.5rem;
+    margin-right: 10%;
+}
+
+#justinSvg {
+    width: 10rem;
+    margin-left: 0.5rem;
+    margin-right: 9%;
+}
+
+@media screen and (min-width: 500px) and (max-width: 824px) {
+    .main-about {
+        .ourTeam {
+            &__title {
+            }
+
+            &__person {
+                &_container {
+                    &-title {
+                        font-size: 2rem;
+                        &-school {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+                &_paragraph {
+                    font-size: 1.05rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1274px) {
+    .main-about {
+        .ourTeam {
+            &__title {
+                font-size: 2.9rem;
+            }
+
+            &__person {
+                &_container {
+                    &-title {
+                        font-size: 2.3rem;
+                        &-school {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                &_paragraph {
+                    font-size: 1.2rem;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    body {
+        .main-about {
+            .ourTeam {
+                &__title {
+                    font-size: 3.1rem;
+                }
+
+                &__person {
+                    &_container {
+                        &-title {
+                            font-size: 2.6rem;
+                            &-school {
+                                font-size: 1.7rem;
+                            }
+                        }
+                    }
+                    &_paragraph {
+                        font-size: 1.3rem;
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    #lydiaSvg {
+        margin-left: -4.5rem;
     }
 }
