@@ -15,12 +15,12 @@
     <nav class="nav">
         <img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo">
         <ul class="nav__links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/participate">Participate</a></li>
-            <li><a href="/resources">Resources</a></li>
-            <li><a href="/donate">Donate</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about" class="not-active">About</a></li>
+            <li><a href="/participate" class="not-active">Participate</a></li>
+            <li><a href="/resources" class="not-active">Resources</a></li>
+            <li><a href="/donate" class="not-active">Donate</a></li>
+            <li><a href="/contact" class="not-active">Contact</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -33,7 +33,7 @@
                 <p class="hero__textContainer_text">Nursing home residents and caretakers need masks. It’s up to <span
                         class="hero__textContainer_text-bold">us</span> to help.</p>
             </div>
-            <a class="hero__btn" href="#">Learn More</a>
+            <a class="hero__btn" href="/participate">Learn More</a>
         </div>
 
         <div class="arrow">
@@ -58,29 +58,30 @@
                 <div class="getInvolved__donate_image">
                     <img src="../svg/donate.svg" alt="Piggy Bank">
                 </div>
-                <button class="getInvolved__donate_button">Donate</button>
+                <a href="/donate"><button class="getInvolved__donate_button" href="/donate">Donate</button></a>
             </div>
             <div class="getInvolved__sew">
                 <div class="getInvolved__sew_image">
                     <img src="../svg/sew.svg" alt="Sewing Machine">
                 </div>
-                <button class="getInvolved__sew_button">Sew</button>
+                <a href="/participate"><button class="getInvolved__sew_button">Sew</button></a>
             </div>
             <div class="getInvolved__learn">
                 <div class="getInvolved__learn_image">
                     <img src="../svg/learn.svg" alt="Brain">
                 </div>
-                <button class="getInvolved__learn_button">Learn</button>
+                <a href="/resources"><button class="getInvolved__learn_button">Learn</button></a>
             </div>
         </div>
 
         <footer class="footer">
             <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
+            <!--
             <div class="footer__svg">
                 <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footer__svg_instagram"></a>
                 <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footer__svg_twitter"></a>
                 <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footer__svg_facebook"></a>
-            </div>
+            </div>-->
         </footer>
     </main>
     <script src="../js/app.js"></script>

@@ -9,6 +9,13 @@
     2.3 Our Mission
     2.4 Get Involved
     2.5 Footer
+3. About Page
+    3.1 About Us 
+    3.2 Our Team
+    3.3 Why We Care
+    3.4 Footer Main
+4. Participate Page
+    4.1 Find Locations
 */
 
 // * Variables * //
@@ -17,6 +24,7 @@
 $darkerTextPurple: #411c63;
 $darkTextPurple: #4b2073;
 $normalTextPurple: #6c33a0;
+$normalTextBlue: #2e3174;
 $mainSectionPurple: #fde3ff;
 $lighterSectionPurple: #fff6ff;
 $navBarPurple: #fde3ff;
@@ -73,10 +81,46 @@ body {
             list-style: none;
 
             a {
+                position: relative;
+                padding-bottom: 0.25rem;
+                letter-spacing: 1px;
                 font-weight: $regular;
                 color: $normalTextPurple;
                 text-decoration: none;
                 font-size: 1.3rem;
+            }
+
+            a::after {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                border-radius: 0.3rem;
+                background: rgba($normalTextPurple, 0.8);
+                content: "";
+                opacity: 0;
+                -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+                -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+                transition: opacity 0.3s, transform 0.3s;
+                -webkit-transform: translateY(10px);
+                -moz-transform: translateY(10px);
+                transform: translateY(10px);
+            }
+
+            a.not-active:hover::after,
+            a.not-active:focus::after {
+                opacity: 0.5;
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+
+            .active::after {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                transform: translateY(0px);
             }
         }
     }
@@ -94,7 +138,7 @@ body {
     .nav__links {
         li {
             a {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
             }
         }
     }
@@ -310,7 +354,6 @@ body {
     }
 }
 
-//TODO Fix this media querys not working
 // * Our Mission * //
 .ourMission {
     color: $darkTextPurple;
@@ -708,9 +751,6 @@ body {
 @media screen and (min-width: 500px) and (max-width: 824px) {
     .main-about {
         .ourTeam {
-            &__title {
-            }
-
             &__person {
                 &_container {
                     &-title {
@@ -728,14 +768,13 @@ body {
     }
 }
 
-@media screen and (min-width: 825px) and (max-width: 1274px) {
+@media screen and (min-width: 825px) and (max-width: 1275px) {
     .main-about {
         .ourTeam {
             &__title {
                 font-size: 2.9rem;
             }
-
-            &__person {
+            a &__person {
                 &_container {
                     &-title {
                         font-size: 2.3rem;
@@ -783,5 +822,158 @@ body {
 
     #lydiaSvg {
         margin-left: -4.5rem;
+    }
+}
+
+// * Why We Care * //
+.whyWeCare {
+    width: 90%;
+    color: $darkTextPurple;
+    margin: 0 auto;
+    padding: 1rem 0;
+    &__title {
+        font-size: 2.3rem;
+        font-weight: $black;
+    }
+
+    &__paragraphOne {
+        padding-left: 0.5rem;
+        padding-top: 0.2rem;
+        font-size: 1.2rem;
+    }
+
+    &__nursingHome {
+        padding-top: 0.5rem;
+        font-weight: $bold;
+        font-size: 1.5rem;
+    }
+
+    &__paragraphTwo {
+        padding-left: 0.5rem;
+        padding-top: 0.2rem;
+        font-size: 1.1rem;
+        span {
+            display: block;
+            padding-top: 0.5rem;
+
+            a {
+                color: $normalTextBlue;
+            }
+
+            a::before {
+                text-decoration: underline;
+                position: absolute;
+                content: attr(data-content);
+                clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+                transition: clip-path 275ms ease;
+            }
+            a:hover::before {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-about {
+        .whyWeCare {
+            &__title {
+                font-size: 2.6rem;
+            }
+            &__paragraphOne {
+                padding-left: 1rem;
+                font-size: 1.4rem;
+            }
+            &__nursingHome {
+                font-size: 1.8rem;
+            }
+            &__paragraphTwo {
+                padding-left: 1rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-about {
+        .whyWeCare {
+            width: 85%;
+
+            &__title {
+                font-size: 2.9rem;
+            }
+            &__paragraphOne {
+                padding-left: 1rem;
+                font-size: 1.6rem;
+            }
+            &__nursingHome {
+                font-size: 2.1rem;
+            }
+            &__paragraphTwo {
+                padding-left: 1rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// * Footer Main * //
+.footerMain {
+    padding-top: 1rem;
+    text-align: center;
+    color: $darkerTextPurple;
+    background-color: $mainSectionPurple;
+    &__title {
+        font-size: 2rem;
+    }
+    &__svg {
+        display: flex;
+        justify-content: center;
+        &_instagram {
+            filter: $svgFilter;
+            width: 4rem;
+            margin: 1.5em;
+            transform: translateY(0);
+            transition: transform 100ms ease-in;
+        }
+        &_twitter {
+            filter: $svgFilter;
+            width: 4rem;
+            margin: 1.5em;
+            transform: translateY(0);
+            transition: transform 100ms ease-in;
+        }
+        &_facebook {
+            filter: $svgFilter;
+            width: 4rem;
+            margin: 1.5em;
+            transform: translateY(0) scale(1);
+            transition: transform 100ms ease-in;
+        }
+
+        &_instagram:hover,
+        &_instagram:focus,
+        &_twitter:hover,
+        &_twitter:focus,
+        &_facebook:hover,
+        &_facebook:focus {
+            transform: translateY(-0.2rem) scale(1.1);
+            transition: transform 150ms ease-out;
+        }
+    }
+}
+
+// ! ---------------- ! //
+// ! PARTICIPATE PAGE ! //
+// ! ---------------- ! //
+.findLocations {
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__button {
     }
 }

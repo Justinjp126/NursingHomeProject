@@ -15,12 +15,12 @@
     <nav class="nav">
         <img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo">
         <ul class="nav__links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/participate">Participate</a></li>
-            <li><a href="/resources">Resources</a></li>
-            <li><a href="/donate">Donate</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/" class="not-active">Home</a></li>
+            <li><a href="/about" class="active">About</a></li>
+            <li><a href="/participate" class="not-active">Participate</a></li>
+            <li><a href="/resources" class="not-active">Resources</a></li>
+            <li><a href="/donate" class="not-active">Donate</a></li>
+            <li><a href="/contact" class="not-active">Contact</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -33,7 +33,7 @@
             <div class="aboutUs__text">The COVID-19 Mask Initiative was created by and run by high school
                 students
                 in
-                the Pittsburgh area. Our goal is to mobilize local sewers and crafters to make masks for nursing
+                the Pittsburgh area. Our goal is to mobilize local crafters and sewers to make masks for nursing
                 homes
                 and personal care facilities in need of supplies, and save lives.</>
             </div>
@@ -98,13 +98,38 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
-            <div class="footer__svg">
-                <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footer__svg_instagram"></a>
-                <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footer__svg_twitter"></a>
-                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footer__svg_facebook"></a>
+
+        <div class="whyWeCare">
+            <div class="whyWeCare__title">Why We Care</div>
+            <div class="whyWeCare__paragraphOne">We care because we're all in this together. In these difficult times,
+                we
+                are all facing similar struggles. We can't fix everything, but we can band together and, little by
+                little, mask by mask, save lives. Together, we really can make a difference, and together we can support
+                each other to get through this crisis.</div>
+            <div class="whyWeCare__nursingHome">Why Nursing Homes & Personal Care Facilities </div>
+            <div class="whyWeCare__paragraphTwo">Nursing homes and personal care facilities have been hit particularly
+                hard by COVID-19. In Pennsylvania alone, over half of deaths from COVID-19 have been residents of
+                nursing homes and personal care homes. At the same time, many of these facilities lack adequate
+                protective equipment such as masks for staff and residents, compounding the problem. <span><a
+                        data-content="The New York Times"
+                        href="https://www.nytimes.com/2020/04/17/us/coronavirus-nursing-homes.html" target="_blank">The
+                        New
+                        York
+                        Times</a> writes about the dire situation nursing homes and residents are facing with COVID-19
+                </span>
             </div>
+        </div>
+
+        <footer class="footerMain">
+            <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
+
+            <!--
+            <div class="footerMain__svg">
+                <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footerMain__svg_instagram"></a>
+                <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footerMain__svg_twitter"></a>
+                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footerMain__svg_facebook"></a>
+            </div>
+        -->
         </footer>
     </main>
 
