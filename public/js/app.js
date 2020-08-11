@@ -19,4 +19,23 @@ const navSlide = () => {
     });
 };
 
+const stickyNav = () => {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY == 0) {
+            var nav = document.getElementsByClassName("nav");
+            for (var i = 0; i < nav.length; i++) {
+                nav[i].classList.remove("scrolling");
+                console.log(nav[i].className);
+            }
+        } else {
+            var nav = document.getElementsByClassName("nav");
+            for (var i = 0; i < nav.length; i++) {
+                nav[i].classList.add("scrolling");
+                console.log(nav[i].className);
+            }
+        }
+    });
+};
+
 navSlide();
+stickyNav();

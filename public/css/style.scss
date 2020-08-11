@@ -53,16 +53,25 @@ body {
     line-height: 1.5;
 }
 
+*:focus {
+    outline: none;
+}
+
 // ! --------- ! //
 // ! HOME PAGE ! //
 // ! --------- ! //
 
 // * Navigation Bar * //
 .nav {
-    position: relative;
+    transition: padding 150ms ease-in, border-bottom 150ms ease-in;
+    border-bottom: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 9999;
     padding: 1em 0em;
-    background: $navBarPurple;
+    background: rgba($navBarPurple, 0.95);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -110,6 +119,7 @@ body {
 
             a.not-active:hover::after,
             a.not-active:focus::after {
+                outline: none;
                 opacity: 0.5;
                 -webkit-transform: translateY(0px);
                 -moz-transform: translateY(0px);
@@ -132,6 +142,12 @@ body {
         cursor: pointer;
         margin-right: 1em;
     }
+}
+
+.scrolling {
+    padding: 0.2rem 0;
+    border-bottom: 2px solid #f3d5ed;
+    transition: padding 200ms ease-out, border-bottom 200ms ease-out;
 }
 
 @media screen and (min-width: 1275px) {
@@ -189,7 +205,6 @@ body {
 
     ul.nav__links.nav--active {
         transform: translateX(0%);
-        margin-top: 1em;
         padding-bottom: 1em;
     }
 }
@@ -209,7 +224,7 @@ body {
 .hero {
     z-index: 1;
     position: relative;
-    margin-top: 1rem;
+    margin-top: 6rem;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url("../img/old-women-mask.jpg");
     background-repeat: no-repeat;
@@ -629,6 +644,7 @@ body {
     place-items: center center;
     padding: 2rem 0;
     grid-column-gap: 2.5rem;
+    margin-top: 4rem;
     &__title {
         margin-bottom: 0.5rem;
         grid-area: title;
@@ -968,12 +984,102 @@ body {
 // ! PARTICIPATE PAGE ! //
 // ! ---------------- ! //
 .findLocations {
-    &__title {
-    }
+    color: white;
+    background: url("../img/mask_two.jpg");
+    background-repeat: no-repeat;
+    background-position: 60% center;
+    background-size: cover;
+    height: 67vh;
+    margin-top: 6rem;
 
-    &__text {
-    }
+    &__content {
+        position: relative;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
 
-    &__button {
+        &_title {
+            padding-top: 2rem;
+            font-size: 2.6rem;
+            font-weight: $bold;
+        }
+
+        &_text {
+            padding-top: 1rem;
+            font-size: 1.6rem;
+        }
+
+        &_button {
+            color: white;
+            position: absolute;
+            left: 0;
+            top: 80%;
+            display: inline-block;
+            border: 0.2rem solid white;
+            border-radius: 3rem;
+            padding: 0.2rem 0;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+            width: 16rem;
+            font-size: 2.1rem;
+            transition: background-color 200ms ease-out, color 200ms ease-out;
+        }
+
+        &_button:hover,
+        &_button:focus {
+            background-color: white;
+            color: $darkTextPurple;
+            transition: background-color 300ms ease-in, color 300ms ease-in;
+        }
+    }
+}
+
+@media screen and (min-width: 625px) and (max-width: 1275px) {
+    .main-participate {
+        .findLocations {
+            height: 71vh;
+            &__content {
+                width: 70%;
+                margin-left: 5%;
+                &_title {
+                    font-size: 3.1rem;
+                }
+                &_text {
+                    font-size: 1.9rem;
+                }
+                &_button {
+                    top: 75%;
+                    width: 19rem;
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-participate {
+        .findLocations {
+            height: 78vh;
+
+            &__content {
+                width: 45%;
+                margin-left: 5%;
+                &_title {
+                    font-size: 3.6rem;
+                }
+                &_text {
+                    font-size: 2.2rem;
+                }
+                &_button {
+                    top: 70%;
+                    width: 23rem;
+                    font-size: 3.1rem;
+                }
+            }
+        }
     }
 }

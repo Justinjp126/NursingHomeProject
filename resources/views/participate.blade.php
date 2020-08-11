@@ -20,18 +20,22 @@
             <li><a href="/participate" class="active">Participate</a></li>
             <li><a href="/resources" class="not-active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
-            <li><a href="/contact" class="not-active">Contact</a></li>
+            <li><a href=~"/contact" class="not-active">Contact</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
         </div>
     </nav>
-    <main>
+    <main class="main-participate">
         <div class="findLocations">
-            <div class="findLocations__title">Get Involved</div>
-            <div class="findLocation__text">Find a participating nursing home or personal care facility in need nearest
-                to you with your zip code</div>
-            <a class="findLocation__button">Find Locations</a>
+            <div class="findLocations__content">
+                <div class="findLocations__content_title">Get Involved</div>
+                <div class="findLocations__content_text">Find a participating nursing home or personal care facility in
+                    need
+                    nearest
+                    to you with your zip code</div>
+                <a class="findLocations__content_button" href="#">Find Locations</a>
+            </div>
         </div>
     </main>
 
