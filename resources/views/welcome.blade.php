@@ -76,12 +76,11 @@
 
         <footer class="footer">
             <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
-            <!--
             <div class="footer__svg">
                 <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footer__svg_instagram"></a>
                 <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footer__svg_twitter"></a>
                 <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footer__svg_facebook"></a>
-            </div>-->
+            </div>
         </footer>
     </main>
     <script src="../js/app.js"></script>

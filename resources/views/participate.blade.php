@@ -20,7 +20,7 @@
             <li><a href="/participate" class="active">Participate</a></li>
             <li><a href="/resources" class="not-active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
-            <li><a href=~"/contact" class="not-active">Contact</a></li>
+            <li><a href="/contact" class="not-active">Contact</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -37,6 +37,16 @@
                 <a class="findLocations__content_button" href="#">Find Locations</a>
             </div>
         </div>
+
+        <div class="enterZip">
+            <div class="enterZip__text">Enter Zip</div>
+            <img class="enterZip__svg" src="../svg/magGlass.svg">
+            <label for="enterZip__form">
+                <input class="enterZip__form" id="enterZip__form" name="zip" type="text" pattern="[0-9]{5}"
+                    placeholder="&nbsp;"></input>
+            </label>
+        </div>
+
     </main>
 
     <script src="../js/app.js"></script>
