@@ -38,13 +38,11 @@
             </div>
         </div>
 
-        <div class="enterZip">
-            <div class="enterZip__text">Enter Zip</div>
+        <div class="enterZip" id="enterZip">
             <img class="enterZip__svg" src="../svg/magGlass.svg">
-            <label for="enterZip__form">
-                <input class="enterZip__form" id="enterZip__form" name="zip" type="text" pattern="[0-9]{5}"
-                    placeholder="&nbsp;"></input>
-            </label>
+            <input class="enterZip__form no-text-form" id="enterZip__form" placeholder="Enter Zip" name="zip"
+                type="input" required pattern="[0-9]{5}"></input>
+            <label class="enterZip__label no-text-label" id="enterZip__label" for="zip">Enter Zip</label>
         </div>
 
     </main>

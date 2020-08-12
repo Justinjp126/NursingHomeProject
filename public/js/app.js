@@ -25,17 +25,40 @@ const stickyNav = () => {
             var nav = document.getElementsByClassName("nav");
             for (var i = 0; i < nav.length; i++) {
                 nav[i].classList.remove("scrolling");
-                console.log(nav[i].className);
             }
         } else {
             var nav = document.getElementsByClassName("nav");
             for (var i = 0; i < nav.length; i++) {
                 nav[i].classList.add("scrolling");
-                console.log(nav[i].className);
             }
         }
     });
 };
 
+const textCheck = () => {
+    var form = document.getElementById("enterZip__form");
+    var label = document.getElementById("enterZip__label");
+    form.addEventListener("input", function () {
+        if (form.value.length !== 0) {
+            form.classList.remove("no-text-form");
+            form.classList.add("has-text-form");
+            label.classList.remove("no-text-label");
+            label.classList.add("has-text-label");
+        } else {
+            form.classList.remove("has-text-form");
+            form.classList.add("no-text-form");
+            label.classList.remove("has-text-label");
+            label.classList.add("no-text-label");
+        }
+    });
+};
+
+function isNumberKey(evt) {
+    var charCode = evt.which ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+    return true;
+}
+
 navSlide();
 stickyNav();
+textCheck();

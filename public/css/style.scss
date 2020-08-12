@@ -1093,27 +1093,67 @@ body {
     margin-top: 3rem;
     padding: 0.5rem 0.2rem;
     border: 0.2rem solid $darkerTextPurple;
-    border-radius: 2rem;
+    border-radius: 3rem;
     position: relative;
     display: flex;
-    &__text {
-        margin-top: -0.8rem;
-        padding: 0 0.4rem;
-        position: absolute;
-        top: 0;
-        left: 10%;
-        font-size: 0.8rem;
+    flex-direction: column;
+
+    &__form {
+        font-family: inherit;
+        padding-left: 1.2rem;
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
         color: $darkerTextPurple;
-        font-weight: $light;
-        background: $mainSectionPurple;
+        font-size: 2rem;
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:placeholder-shown ~ .enterZip__label {
+            font-size: 1.8rem;
+            cursor: text;
+            top: 50%;
+            z-index: -1;
+        }
+
+        &:required,
+        &:invalid {
+            box-shadow: none;
+        }
+    }
+
+    &__label {
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+    }
+
+    &__form {
+        &:focus ~ .enterZip__label {
+            position: absolute;
+            top: -2px;
+            z-index: 1;
+            display: block;
+            transition: 0.2s;
+            font-size: 1rem;
+            background-color: $mainSectionPurple;
+            padding: 0 5px;
+            font-weight: $bold;
+            color: rgba($darkerTextPurple, 0.9);
+        }
     }
 
     &__svg {
         filter: $svgFilter;
-        width: 1.5rem;
-        margin-left: 0.5rem;
-    }
-
-    &__form {
+        width: 1.8rem;
+        margin-right: 1.2rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
