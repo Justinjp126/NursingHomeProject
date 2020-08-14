@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php
+    include_once $_SERVER['DOCUMENT_ROOT']. '../php/config.php';
+    $db = mysqli_connect($myhost, $myuser, $mypw, $mydbname)
+    or die("Error connecting to $myhost");
+    unset ($myhost, $myuser, $mypw, $mydbname);
+?>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -41,10 +49,20 @@
         <div class="enterZip" id="enterZip">
             <img class="enterZip__svg" src="../svg/magGlass.svg">
             <input class="enterZip__form no-text-form" id="enterZip__form" placeholder="Enter Zip" name="zip"
-                type="input" required pattern="[0-9]{5}"></input>
+                type="input" required pattern="[0-9]{5}" maxlength="5" onkeypress="return isNumber(event);"></input>
             <label class="enterZip__label no-text-label" id="enterZip__label" for="zip">Enter Zip</label>
         </div>
+        <div class="delete"></div>
+        <?php
+	     $result = mysqli_query($db, "SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from final");
+	     while ($row = $result->fetch_assoc())
+	     {
+		echo "<tr>";
+	     	foreach($row as $value) echo "<td>$value</td>";
+		echo "</tr>";
 
+	     }
+        ?>
     </main>
 
     <script src="../js/app.js"></script>

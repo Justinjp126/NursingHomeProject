@@ -1,3 +1,6 @@
+/**
+ * Slides out the menu when you press menu on mobile/small screens
+ */
 const navSlide = () => {
     const menu = document.querySelector(".menu");
     const nav = document.querySelector(".nav__links");
@@ -19,6 +22,9 @@ const navSlide = () => {
     });
 };
 
+/**
+ * Checks if user scrolled and if so, changes the nav to w/o padding and sticky
+ */
 const stickyNav = () => {
     window.addEventListener("scroll", function () {
         if (window.scrollY == 0) {
@@ -35,30 +41,14 @@ const stickyNav = () => {
     });
 };
 
-const textCheck = () => {
-    var form = document.getElementById("enterZip__form");
-    var label = document.getElementById("enterZip__label");
-    form.addEventListener("input", function () {
-        if (form.value.length !== 0) {
-            form.classList.remove("no-text-form");
-            form.classList.add("has-text-form");
-            label.classList.remove("no-text-label");
-            label.classList.add("has-text-label");
-        } else {
-            form.classList.remove("has-text-form");
-            form.classList.add("no-text-form");
-            label.classList.remove("has-text-label");
-            label.classList.add("no-text-label");
-        }
-    });
-};
-
-function isNumberKey(evt) {
+/**
+ * Checks if Enter Zip input is only a number
+ */
+const isNumber = (evt) => {
     var charCode = evt.which ? evt.which : evt.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
     return true;
-}
+};
 
 navSlide();
 stickyNav();
-textCheck();

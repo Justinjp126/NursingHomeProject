@@ -232,6 +232,7 @@ body {
     background-position: center center;
     background-size: cover;
     height: 67vh;
+    min-height: 400px;
     color: white;
     text-align: center;
 
@@ -993,7 +994,7 @@ body {
     background-size: cover;
     height: 75vh;
     margin-top: 6rem;
-
+    min-height: 420px;
     &__content {
         position: relative;
         height: 100%;
@@ -1088,25 +1089,29 @@ body {
 
 // * Enter Zip Code * //
 .enterZip {
-    width: 65%;
-    margin: 0 auto;
-    margin-top: 3rem;
-    padding: 0.5rem 0.2rem;
-    border: 0.2rem solid $darkerTextPurple;
-    border-radius: 3rem;
     position: relative;
+    padding: 15px 0 0;
+    width: 60%;
+    max-width: 625px;
     display: flex;
     flex-direction: column;
-
+    margin: 0 auto;
+    margin-top: 10vh;
+    font-weight: $bold;
     &__form {
+        letter-spacing: 1px;
         font-family: inherit;
-        padding-left: 1.2rem;
         width: 100%;
+        border: 0;
+        border-bottom: 3px solid $darkerTextPurple;
+        outline: 0;
+        font-size: 1.8rem;
+        color: $darkTextPurple;
+        padding: 7px 0;
         background: transparent;
-        border: none;
-        outline: none;
-        color: $darkerTextPurple;
-        font-size: 2rem;
+        transition: border-color 0.2s ease-out;
+        position: relative;
+        padding-bottom: 3px;
 
         &::placeholder {
             color: transparent;
@@ -1115,8 +1120,7 @@ body {
         &:placeholder-shown ~ .enterZip__label {
             font-size: 1.8rem;
             cursor: text;
-            top: 50%;
-            z-index: -1;
+            top: 10px;
         }
 
         &:required,
@@ -1126,34 +1130,114 @@ body {
     }
 
     &__label {
+        position: absolute;
         top: 0;
         display: block;
         transition: 0.2s;
         font-size: 1rem;
+        color: rgba($darkerTextPurple, 1);
+        z-index: -1;
     }
 
-    &__form {
-        &:focus ~ .enterZip__label {
+    &__form:focus {
+        ~ .enterZip__label {
             position: absolute;
-            top: -2px;
-            z-index: 1;
+            top: 0;
             display: block;
-            transition: 0.2s;
+            transition: all 0.2s ease;
             font-size: 1rem;
-            background-color: $mainSectionPurple;
-            padding: 0 5px;
-            font-weight: $bold;
-            color: rgba($darkerTextPurple, 0.9);
+            color: rgba($darkerTextPurple, 1);
         }
+        font-weight: $bold;
+        border-width: 3px;
+        border-image: linear-gradient(
+            90deg,
+            rgba(111, 50, 161, 1) 0%,
+            rgba(72, 25, 129, 1) 100%
+        );
+        border-image-slice: 1;
     }
 
     &__svg {
         filter: $svgFilter;
-        width: 1.8rem;
+        width: 2rem;
         margin-right: 1.2rem;
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
     }
+}
+
+@media screen and (min-width: 625px) and (max-width: 1275px) {
+    .main-participate {
+        .enterZip {
+            &__form {
+                font-size: 2.2rem;
+
+                &::placeholder {
+                    color: transparent;
+                }
+
+                &:placeholder-shown ~ .enterZip__label {
+                    font-size: 2.2rem;
+                }
+            }
+
+            &__label {
+                font-size: 1.1rem;
+            }
+
+            &__form:focus {
+                ~ .enterZip__label {
+                    font-size: 1.1rem;
+                }
+            }
+
+            &__svg {
+                width: 2.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-participate {
+        .enterZip {
+            &__form {
+                font-size: 2.6rem;
+
+                &::placeholder {
+                    color: transparent;
+                }
+
+                &:placeholder-shown ~ .enterZip__label {
+                    font-size: 2.6rem;
+                }
+            }
+
+            &__label {
+                font-size: 1.1rem;
+            }
+
+            &__form:focus {
+                ~ .enterZip__label {
+                    font-size: 1.1rem;
+                }
+            }
+
+            &__svg {
+                width: 2.2rem;
+            }
+        }
+    }
+}
+
+.delete {
+    margin: 1rem;
+
+    position: relative;
+    height: 50vh;
+    background: #fbc9ff;
+    border-radius: 10px;
 }
