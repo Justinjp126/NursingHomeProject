@@ -17,6 +17,7 @@
 4. Participate Page
     4.1 Find Locations
     4.2 Enter Zip
+    4.3 Table of Nursing Homes
 */
 
 // * Variables * //
@@ -231,6 +232,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-attachment: scroll;
     height: 67vh;
     min-height: 400px;
     color: white;
@@ -286,6 +288,7 @@ body {
 
 @media screen and (min-width: 500px) {
     .hero {
+        background-attachment: scroll;
         height: 69vh;
 
         &__textContainer {
@@ -306,6 +309,7 @@ body {
 @media screen and (min-width: 825px) {
     .hero {
         height: 69vh;
+        background-attachment: scroll;
 
         &__textContainer {
             width: 78%;
@@ -325,6 +329,7 @@ body {
 @media screen and (min-width: 1275px) {
     .hero {
         height: 73vh;
+        background-attachment: fixed;
 
         &__textContainer {
             width: 55%;
@@ -454,6 +459,7 @@ body {
             width: 11rem;
         }
         &_button {
+            font-family: inherit;
             display: inline-block;
             width: 95%;
             padding: 0.2rem 0;
@@ -992,6 +998,7 @@ body {
     background-repeat: no-repeat;
     background-position: 60% center;
     background-size: cover;
+    background-attachment: scroll;
     height: 75vh;
     margin-top: 6rem;
     min-height: 420px;
@@ -1044,6 +1051,8 @@ body {
     .main-participate {
         .findLocations {
             height: 78vh;
+            background-attachment: scroll;
+
             &__content {
                 width: 70%;
                 margin-left: 5%;
@@ -1067,6 +1076,7 @@ body {
     .main-participate {
         .findLocations {
             height: 81vh;
+            background-attachment: fixed;
 
             &__content {
                 width: 45%;
@@ -1233,11 +1243,59 @@ body {
     }
 }
 
-.delete {
-    margin: 1rem;
+// * Table of Nursing Homes * //
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+table tr {
+    background: white;
+    border-bottom: 1px solid;
+}
+table th,
+table td {
+    padding: 10px 20px;
+}
+table td span {
+    background: #eee;
+    color: dimgrey;
+    display: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+}
 
-    position: relative;
-    height: 50vh;
-    background: #fbc9ff;
-    border-radius: 10px;
+@media (max-width: 800px) {
+    table thead {
+        left: -9999px;
+        position: absolute;
+        visibility: hidden;
+    }
+    table tr {
+        border-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    table td {
+        border: 1px solid;
+        margin: 0 -1px -1px 0;
+        padding-top: 35px;
+        position: relative;
+        width: 50%;
+    }
+    table td span {
+        display: block;
+    }
+}
+
+.alert {
+    cursor: pointer;
+    color: red;
 }

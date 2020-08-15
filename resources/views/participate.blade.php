@@ -17,11 +17,12 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Participate</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
     <nav class="nav">
-        <img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo">
+        <a href="/"><img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo"></a>
         <ul class="nav__links">
             <li><a href="/" class="not-active">Home</a></li>
             <li><a href="/about" class="not-active">About</a></li>
@@ -52,17 +53,44 @@
                 type="input" required pattern="[0-9]{5}" maxlength="5" onkeypress="return isNumber(event);"></input>
             <label class="enterZip__label no-text-label" id="enterZip__label" for="zip">Enter Zip</label>
         </div>
-        <div class="delete"></div>
-        <?php
-	     $result = mysqli_query($db, "SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from final");
-	     while ($row = $result->fetch_assoc())
-	     {
-		echo "<tr>";
-	     	foreach($row as $value) echo "<td>$value</td>";
-		echo "</tr>";
 
-	     }
-        ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nursing Home</th>
+                    <th>Needs</th>
+                    <th>Address</th>
+                    <th>Zip Code</th>
+                    <th>Preferred Mask Type</th>
+                    <th>Mask Fabric Preference</th>
+                    <th>Mailing Address</th>
+                    <th>Other Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $result = mysqli_query($db, "SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from final");
+                
+                while ($row = $result->fetch_assoc())
+                {
+                echo "<tr>";
+                    $counter = 0;
+                    $colNames = ["Nursing Home", "Needs", "Address", "Zip Code", "Mask Type", "Mask Fabric", "Mailing Address", "Other Information"];
+                    foreach($row as $value) {
+                        if($colNames[$counter] == "Other Information") {
+                            echo "<td><span>$colNames[$counter]</span> <a class='alert'>More Information</a></td>";
+                        } else {
+                        echo "<td><span>$colNames[$counter]</span> $value</td>";
+                        }
+                        ++$counter;
+                    }
+                echo "</tr>";
+
+                }
+                ?>
+            </tbody>
+        </table>
+
     </main>
 
     <script src="../js/app.js"></script>

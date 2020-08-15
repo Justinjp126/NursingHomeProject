@@ -13,7 +13,7 @@
 
 <body>
     <nav class="nav">
-        <img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo">
+        <a href="/"><img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo"></a>
         <ul class="nav__links">
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/about" class="not-active">About</a></li>

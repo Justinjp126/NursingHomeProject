@@ -50,5 +50,12 @@ const isNumber = (evt) => {
     return true;
 };
 
+document
+    .querySelector(".findLocations__content_button")
+    .addEventListener("click", function () {
+        Swal.fire("Our First Alert");
+        console.log("clicked");
+    });
+
 navSlide();
 stickyNav();
