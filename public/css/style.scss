@@ -49,6 +49,10 @@ $svgFilter: invert(15%) sepia(16%) saturate(6307%) hue-rotate(249deg)
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Lato", sans-serif;
     background-color: $mainSectionPurple;
@@ -1244,48 +1248,139 @@ body {
 }
 
 // * Table of Nursing Homes * //
+.table-container {
+    margin: 1rem;
+    -moz-border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+    background: #f6cafa;
+}
+
+thead {
+    color: $darkerTextPurple;
+    font-size: 1.1rem;
+}
+
+tbody {
+    -moz-border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fcd6ff;
+}
+
 table {
+    margin-top: 2rem;
+    -moz-border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+    color: $darkTextPurple;
     border-collapse: collapse;
+    border-style: none;
     text-align: left;
     width: 100%;
 }
 table tr {
-    background: white;
-    border-bottom: 1px solid;
+    background: none;
+    border-bottom: 2px solid $darkerTextPurple;
 }
+
+table tbody tr:nth-last-child(1) {
+    border-bottom: none;
+}
+
 table th,
 table td {
     padding: 10px 20px;
 }
-table td span {
-    background: #eee;
-    color: dimgrey;
+
+#nursingHomeTab {
+    letter-spacing: 1px;
+    background: $mainSectionPurple;
+    color: $darkerTextPurple;
     display: none;
-    font-size: 10px;
+    font-size: 0.8rem;
     font-weight: bold;
     padding: 5px;
     position: absolute;
     text-transform: uppercase;
     top: 0;
     left: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
 }
 
-@media (max-width: 800px) {
+table td span {
+    letter-spacing: 1px;
+    background: $mainSectionPurple;
+    color: $darkerTextPurple;
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 1px;
+    left: 1px;
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+}
+
+.alert {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+a::before {
+    text-decoration: underline;
+    position: absolute;
+    content: attr(data-content);
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: clip-path 275ms ease;
+}
+a:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media screen and (max-width: 1275px) and (min-width: 825px) {
+    .table-container {
+        margin: 1rem;
+        -moz-border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        border-radius: 1rem;
+        background: none;
+    }
+
+    tbody tr {
+        background-color: #fcd6ff;
+        -moz-border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+
     table thead {
         left: -9999px;
         position: absolute;
         visibility: hidden;
     }
     table tr {
+        font-size: 1.3rem;
         border-bottom: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 40px;
+        border: 2px solid $darkerTextPurple;
     }
     table td {
-        border: 1px solid;
-        margin: 0 -1px -1px 0;
         padding-top: 35px;
         position: relative;
         width: 50%;
@@ -1293,9 +1388,84 @@ table td span {
     table td span {
         display: block;
     }
+    table tbody tr:nth-last-child(1) {
+        border-bottom: 2px solid $darkerTextPurple;
+    }
+    #nursingHomeTab {
+        display: block;
+    }
+
+    table tbody tr td:nth-child(1),
+    table tbody tr td:nth-child(2),
+    table tbody tr td:nth-child(3),
+    table tbody tr td:nth-child(4),
+    table tbody tr td:nth-child(5),
+    table tbody tr td:nth-child(6) {
+        border-bottom: 2px solid $darkerTextPurple;
+    }
+
+    table tbody tr td:nth-child(odd) {
+        border-right: 2px solid $darkerTextPurple;
+    }
 }
 
-.alert {
-    cursor: pointer;
-    color: red;
+@media screen and (max-width: 825px) {
+    .table-container {
+        margin: 1rem;
+        -moz-border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        border-radius: 1rem;
+        background: none;
+    }
+
+    tbody tr {
+        background-color: #fcd6ff;
+        -moz-border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+
+    table thead {
+        left: -9999px;
+        position: absolute;
+        visibility: hidden;
+    }
+    table tr {
+        font-size: 1.1rem;
+        border-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        border: 2px solid $darkerTextPurple;
+    }
+    table td {
+        padding-top: 35px;
+        position: relative;
+        width: 50%;
+    }
+    table td span {
+        font-size: 0.7rem;
+        display: block;
+    }
+    table tbody tr:nth-last-child(1) {
+        border-bottom: 2px solid $darkerTextPurple;
+    }
+    #nursingHomeTab {
+        font-size: 0.7rem;
+        display: block;
+    }
+
+    table tbody tr td:nth-child(1),
+    table tbody tr td:nth-child(2),
+    table tbody tr td:nth-child(3),
+    table tbody tr td:nth-child(4),
+    table tbody tr td:nth-child(5),
+    table tbody tr td:nth-child(6) {
+        border-bottom: 2px solid $darkerTextPurple;
+    }
+
+    table tbody tr td:nth-child(odd) {
+        border-right: 2px solid $darkerTextPurple;
+    }
 }
