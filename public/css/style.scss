@@ -18,6 +18,13 @@
     4.1 Find Locations
     4.2 Enter Zip
     4.3 Table of Nursing Homes
+5. Resources Page
+    5.1 Resources
+    5.2 Information
+    5.3 Videos
+    5.4 Other Information
+    5.5 Other Mask Groups
+6. Donate Page
 */
 
 // * Variables * //
@@ -382,7 +389,7 @@ body {
 
 // * Our Mission * //
 .ourMission {
-    color: $darkTextPurple;
+    color: $darkerTextPurple;
     text-align: center;
     width: 90%;
     margin: 0 auto;
@@ -399,6 +406,7 @@ body {
         padding-bottom: 1em;
         font-size: 1.3rem;
         font-weight: $regular;
+        color: $darkTextPurple;
     }
 }
 
@@ -440,7 +448,7 @@ body {
     text-shadow: $textShadowLight;
     background: $lighterSectionPurple;
     text-align: center;
-    color: $darkTextPurple;
+    color: $darkerTextPurple;
 }
 
 .getInvolved {
@@ -595,7 +603,7 @@ body {
 
 // * Footer * //
 .footer {
-    padding-top: 1rem;
+    padding: 1rem 0;
     text-align: center;
     color: $darkerTextPurple;
     background-color: $lighterSectionPurple;
@@ -662,6 +670,7 @@ body {
         grid-area: title;
         font-size: 2.5rem;
         font-weight: $black;
+        color: $darkerTextPurple;
         text-shadow: $textShadowDark;
     }
 
@@ -730,6 +739,7 @@ body {
         font-weight: $black;
         text-shadow: $textShadowLight;
         text-align: center;
+        color: $darkerTextPurple;
     }
 
     &__person {
@@ -860,6 +870,7 @@ body {
     margin: 0 auto;
     padding: 1rem 0;
     &__title {
+        color: $darkerTextPurple;
         font-size: 2.3rem;
         font-weight: $black;
     }
@@ -948,7 +959,7 @@ body {
 
 // * Footer Main * //
 .footerMain {
-    padding-top: 1rem;
+    padding: 1rem 0;
     text-align: center;
     color: $darkerTextPurple;
     background-color: $mainSectionPurple;
@@ -1469,3 +1480,338 @@ a:hover::before {
         border-right: 2px solid $darkerTextPurple;
     }
 }
+
+// ! -------------- ! //
+// ! RESOURCES PAGE ! //
+// ! -------------- ! //
+
+// * Resources * //
+.resources {
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: left;
+    color: $darkerTextPurple;
+    padding: 2rem 0;
+    width: 90%;
+
+    &__title {
+        margin-bottom: 0.7rem;
+        font-size: 2.5rem;
+        font-weight: $black;
+        text-shadow: $textShadowDark;
+    }
+    &__text {
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: $regular;
+        color: $darkTextPurple;
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .resources {
+        width: 85%;
+
+        &__title {
+            font-size: 2.9rem;
+        }
+
+        &__text {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .resources {
+        width: 80%;
+        text-align: left;
+
+        &__title {
+            font-size: 3.3rem;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+    }
+}
+
+// * Information * //
+.container-info {
+    background: $lighterSectionPurple;
+}
+.covidInformation {
+    padding: 1.5rem 0;
+    width: 90%;
+    color: $darkTextPurple;
+    font-weight: $bold;
+    margin: 0 auto;
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: $darkTextPurple;
+        margin-left: 0.5rem;
+        font-weight: $regular;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        &_link {
+            display: inline;
+            position: relative;
+            a {
+                color: $normalTextBlue;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .covidInformation {
+        width: 85%;
+        &__title {
+            font-size: 2.2rem;
+        }
+        &__text {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .covidInformation {
+        width: 80%;
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__text {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+// * Videos * //
+.videos {
+    width: 90%;
+    margin: 2rem auto;
+
+    &__noSew {
+        cursor: pointer;
+        position: relative;
+
+        &_text {
+            position: absolute;
+            top: 0%;
+            color: white;
+            font-size: clamp(1.5rem, 3vw, 3.5rem);
+            margin-top: 0.5rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__separate {
+        margin: 1.5rem;
+    }
+    &__sew {
+        cursor: pointer;
+        position: relative;
+
+        &_text {
+            position: absolute;
+            top: 0%;
+            color: white;
+            font-size: clamp(1.5rem, 3vw, 3.5rem);
+            margin-top: 0.5rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.video-js .vjs-big-play-button {
+    width: 25% !important;
+    height: 25% !important;
+    max-width: 99px;
+    max-height: 55.6833px;
+    display: block;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
+.vjs-icon-placeholder::before {
+    position: relative !important;
+}
+
+.video-js .vjs-big-play-button:hover {
+    transition: all 1000ms ease-out !important;
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-resources {
+        .videos {
+            width: 85%;
+            &__noSew {
+                &_text {
+                    margin-top: 1rem;
+                    //font-size: 2rem;
+                }
+            }
+            &__sew {
+                &_text {
+                    margin-top: 1rem;
+                    //font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1275px) {
+    .main-resources {
+        .videos {
+            width: 85%;
+            &__noSew {
+                &_text {
+                    margin-top: 1rem;
+                    //font-size: 2.5rem;
+                }
+            }
+            &__sew {
+                &_text {
+                    margin-top: 1rem;
+                    // font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+// * Other Information * //
+.container-mask {
+    background-color: $lighterSectionPurple;
+
+    .otherInformation {
+        padding: 1.5rem 0;
+        width: 90%;
+        color: $darkTextPurple;
+        font-weight: $bold;
+        margin: 0 auto;
+
+        &__title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        &__text {
+            color: $darkTextPurple;
+            margin-left: 0.5rem;
+            font-weight: $regular;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            &_link {
+                display: inline;
+                position: relative;
+                a {
+                    color: $normalTextBlue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-resources {
+        .otherInformation {
+            width: 85%;
+            &__title {
+                font-size: 2.2rem;
+            }
+            &__text {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-resources {
+        .otherInformation {
+            width: 80%;
+            &__title {
+                font-size: 2.5rem;
+            }
+            &__text {
+                font-size: 1.9rem;
+            }
+        }
+    }
+}
+
+// * Other Mask Groups * //
+.otherGroups {
+    padding: 1.5rem 0;
+    width: 90%;
+    color: $darkTextPurple;
+    font-weight: $bold;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: $darkTextPurple;
+        margin-left: 0.5rem;
+        font-weight: $regular;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        &_link {
+            display: inline;
+            position: relative;
+            a {
+                color: $normalTextBlue;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-resources {
+        .otherGroups {
+            width: 85%;
+            &__title {
+                font-size: 2.2rem;
+            }
+            &__text {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-resources {
+        .otherGroups {
+            width: 80%;
+            &__title {
+                font-size: 2.5rem;
+            }
+            &__text {
+                font-size: 1.9rem;
+            }
+        }
+    }
+}
+
+// ! ----------- ! //
+// ! DONATE PAGE ! //
+// ! ----------- ! //

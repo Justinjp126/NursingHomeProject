@@ -163,9 +163,43 @@ function showPosition() {
                 });
         });
     } else {
-        alert("Sorry, your browser does not support HTML5 geolocation.");
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Sorry, your browser doesn't not support HTML5 Geolocation",
+            showClass: {
+                popup: "animate__animated animate__fadeIn animate__faster "
+            },
+            hideClass: {
+                popup: "animate__animated animate__fadeOut animate__faster"
+            }
+        });
     }
 }
 
+/**
+ * Remove Text from video on click
+ */
+const disableButtons = () => {
+    var noSewText = document.querySelector(".videos__noSew_text");
+    var sewVideoText = document.querySelector(".videos__sew_text");
+    var noSewVideo = document.getElementById("videos__noSew");
+    var sewVideo = document.getElementById("videos__sew");
+
+    noSewVideo.addEventListener("click", function() {
+        noSewText.style.display = "none";
+    });
+    noSewVideo.addEventListener("touchstart", function() {
+        noSewText.style.display = "none";
+    });
+    sewVideo.addEventListener("click", function() {
+        sewVideoText.style.display = "none";
+    });
+    sewVideo.addEventListener("touchstart", function() {
+        sewVideoText.style.display = "none";
+    });
+};
+
 navSlide();
 stickyNav();
+disableButtons();
