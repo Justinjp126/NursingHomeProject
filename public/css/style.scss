@@ -66,6 +66,17 @@ body {
     line-height: 1.5;
 }
 
+::-moz-selection {
+    /* Code for Firefox */
+    color: $lighterSectionPurple;
+    background: $darkerTextPurple;
+}
+
+::selection {
+    color: $lighterSectionPurple;
+    background: $darkerTextPurple;
+}
+
 *:focus {
     outline: none;
 }
@@ -1815,3 +1826,172 @@ a:hover::before {
 // ! ----------- ! //
 // ! DONATE PAGE ! //
 // ! ----------- ! //
+
+// * Donate * //
+.donate {
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: left;
+    color: $darkerTextPurple;
+    padding: 2rem 0;
+    width: 90%;
+
+    &__title {
+        margin-bottom: 0.7rem;
+        font-size: 2.5rem;
+        font-weight: $black;
+        text-shadow: $textShadowDark;
+    }
+    &__text {
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: $regular;
+        color: $darkTextPurple;
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-donate {
+        .donate {
+            width: 85%;
+
+            &__title {
+                font-size: 2.9rem;
+            }
+
+            &__text {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-donate {
+        .donate {
+            width: 80%;
+            text-align: left;
+
+            &__title {
+                font-size: 3.3rem;
+            }
+
+            &__text {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// * Organizations * //
+.container-organizations {
+    background: $lighterSectionPurple;
+}
+.organizations {
+    padding: 1.5rem 0;
+    width: 90%;
+    color: $darkTextPurple;
+    font-weight: $bold;
+    margin: 0 auto;
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: $darkTextPurple;
+        margin-left: 0.5rem;
+        font-weight: $regular;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        &_link {
+            color: $darkTextPurple;
+            display: inline;
+            position: relative;
+            a {
+                color: $normalTextBlue;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .organizations {
+        width: 85%;
+        &__title {
+            font-size: 2.2rem;
+        }
+        &__text {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .organizations {
+        width: 80%;
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__text {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+// * Donating Information * //
+.donateInformation {
+    padding: 1.5rem 0;
+    width: 90%;
+    color: $darkTextPurple;
+    font-weight: $bold;
+    margin: 0 auto;
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: $darkTextPurple;
+        margin-left: 0.5rem;
+        font-weight: $regular;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        &_link {
+            color: $darkTextPurple;
+            display: inline;
+            position: relative;
+            a {
+                color: $normalTextBlue;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .donateInformation {
+        width: 85%;
+        &__title {
+            font-size: 2.2rem;
+        }
+        &__text {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .donateInformation {
+        width: 80%;
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__text {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+// ! ------------ ! //
+// ! CONTACT PAGE ! //
+// ! ------------ ! //
