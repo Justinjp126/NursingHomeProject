@@ -9,6 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>About</title>
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script src="../js/SwupOverlayTheme.js"></script>
+    <script defer src="../js/swup.js"></script>
 </head>
 
 <body>
@@ -26,8 +29,7 @@
             <h4>Menu</h4>
         </div>
     </nav>
-    <main class="main-about">
-
+    <main class="main-about transition-fade" id="swup">
         <div class="aboutUs">
             <div class="aboutUs__title">About Us</div>
             <div class="aboutUs__text">The COVID-19 Mask Initiative was created by and run by high school

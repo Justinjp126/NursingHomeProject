@@ -9,7 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Resources</title>
-    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script src="../js/SwupOverlayTheme.js"></script>
+    <script defer src="../js/swup.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,7 @@
         </div>
     </nav>
 
-    <main class="main-resources">
+    <main class="main-resources transition-fade" id="swup">
         <div class="resources">
             <h1 class="resources__title">Resources</h1>
             <p class="resources__text">Find links to valuable resources including mask patterns, sewing tutorials,
@@ -67,22 +69,22 @@
         </div>
 
         <div class="videos">
-            <div class="videos__noSew" id="videos__noSew">
-                <video controls id="noSewVideo" class="video-js vjs-big-play-button"
-                    poster="../img/mask-poster-dark.png"
-                    data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-                    <source src="../vid/no-sew.mp4" type="video/mp4">
-                </video>
-                <h3 class="videos__noSew_text">No-Sew Mask Tutorial</h3>
+            <div class="container-noSew" id="noSew">
+                <div class="videos__noSew" id="videos__noSew">
+                    <video controls id="noSewVideo" poster="../img/mask-poster-dark.png" <source src="../vid/no-sew.mp4"
+                        type="video/mp4">
+                    </video>
+                    <h3 class="videos__noSew_text" id="noSewText">No-Sew Mask Tutorial</h3>
+                </div>
             </div>
             <div class="videos__separate"></div>
-            <div class="videos__sew" id="videos__sew">
-                <video controls id="sewVideo" class="video-js vjs-big-play-button"
-                    poster="../img/no-mask-poster-dark.png"
-                    data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-                    <source src="../vid/sew.mp4" type="video/mp4">
-                </video>
-                <h3 class="videos__sew_text">Sewing Mask Tutorial</h3>
+            <div class="container-sew" id="sew">
+                <div class="videos__sew" id="videos__sew">
+                    <video controls id="sewVideo" poster="../img/no-mask-poster-dark.png" <source src="../vid/sew.mp4"
+                        type="video/mp4">
+                    </video>
+                    <h3 class="videos__sew_text" id="sewText">Sewing Mask Tutorial</h3>
+                </div>
             </div>
         </div>
 
@@ -129,6 +131,4 @@
         </footer>
     </main>
 
-    <script src="../js/app.js"></script>
-    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 </body>

@@ -19,6 +19,9 @@
     <title>Participate</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script src="../js/SwupOverlayTheme.js"></script>
+    <script defer src="../js/swup.js"></script>
 </head>
 
 <body>
@@ -36,7 +39,8 @@
             <h4>Menu</h4>
         </div>
     </nav>
-    <main class="main-participate">
+
+    <main class="main-participate transition-fade" id="swup">
         <div class="findLocations">
             <div class="findLocations__content" id="findLocations__content">
                 <div class="findLocations__content_title">Get Involved</div>
@@ -71,20 +75,24 @@
                         <th>Mask Fabric Preference</th>
                         <th>Mailing Address</th>
                         <th>Other Information</th>
+                        <th>Donate Masks</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                $result = mysqli_query($db, "SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from final");
+                $result = mysqli_query($db, "SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information`, `Donate` from final");
                 
                 while ($row = $result->fetch_assoc())
                 {
                 echo "<tr>";
                     $counter = 0;
-                    $colNames = ["Nursing Home", "Needs", "Address", "Zip Code", "Mask Type", "Mask Fabric", "Mailing Address", "Other Information"];
+                    $colNames = ["Nursing Home", "Needs", "Address", "Zip Code", "Mask Type", "Mask Fabric", "Mailing Address", "Other Information", "Donate Masks"];
                     foreach($row as $value) {
                         if ($colNames[$counter] == "Other Information") {
                             echo "<td><span>$colNames[$counter]</span> <a class='alert' data-text='$value' data-content='More Information' onclick='otherInfoAlert(this);'>More Information</a></td>";
+                        } 
+                        else if ($colNames[$counter] == "Donate Masks") {
+                            echo "<td><span>$colNames[$counter]</span> <button class='donate-button' data-content='Donate' href='#'>Donate</button></td>";
                         } 
                         else if ($colNames[$counter] == "Nursing Home") {
                             echo "<td><span id='nursingHomeTab'>$colNames[$counter]</span> $value</td>";

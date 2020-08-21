@@ -9,6 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Donate</title>
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script src="../js/SwupOverlayTheme.js"></script>
+    <script defer src="../js/swup.js"></script>
 </head>
 
 <body>
@@ -26,7 +29,8 @@
             <h4>Menu</h4>
         </div>
     </nav>
-    <main class="main-donate">
+
+    <main class="main-donate transition-fade" id="swup">
         <div class="donate">
             <h1 class="donate__title">Donate</h1>
             <p class="donate__text">If you aren't a crafter but still want to help, the listed organizations are taking

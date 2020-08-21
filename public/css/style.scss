@@ -25,6 +25,13 @@
     5.4 Other Information
     5.5 Other Mask Groups
 6. Donate Page
+    6.1 Donate
+    6.2 Organizations
+    6.3 Donating Information
+7. Contact Page
+    7.1 Contact Title
+    7.2 Contact Form
+
 */
 
 // * Variables * //
@@ -50,6 +57,8 @@ $textShadowDark: 0px -7px 0px rgba(251, 210, 255, 0.8);
 $textShadowLight: 0px -7px 0px rgba(251, 210, 255, 0.4);
 $svgFilter: invert(15%) sepia(16%) saturate(6307%) hue-rotate(249deg)
     brightness(94%) contrast(101%);
+
+//All elements stuff
 * {
     padding: 0;
     margin: 0;
@@ -1372,6 +1381,33 @@ a:hover::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.donate-button {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    color: #fff;
+    border: none;
+    background-color: $normalTextPurple;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4rem;
+    transition: background-color 200ms ease-out;
+    font-size: 1rem;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 150px;
+}
+
+.donate-button:hover,
+.donate-button:focus,
+.donate-button:active {
+    background-color: $darkTextPurple;
+    transition: background-color 300ms ease-in;
+}
+
 @media screen and (max-width: 1275px) and (min-width: 825px) {
     .table-container {
         margin: 1rem;
@@ -1483,7 +1519,8 @@ a:hover::before {
     table tbody tr td:nth-child(3),
     table tbody tr td:nth-child(4),
     table tbody tr td:nth-child(5),
-    table tbody tr td:nth-child(6) {
+    table tbody tr td:nth-child(6),
+    table tbody tr td:nth-child(7) {
         border-bottom: 2px solid $darkerTextPurple;
     }
 
@@ -1641,29 +1678,10 @@ a:hover::before {
     }
 }
 
-.video-js .vjs-big-play-button {
-    width: 25% !important;
-    height: 25% !important;
-    max-width: 99px;
-    max-height: 55.6833px;
+video {
     display: block;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    margin: 0 !important;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition: opacity 200ms ease-in;
-}
-
-.vjs-icon-placeholder::before {
-    position: relative !important;
-}
-
-.video-js .vjs-big-play-button:hover {
-    transition: all 1000ms ease-out !important;
+    width: 100%;
+    max-height: 100%;
 }
 
 @media screen and (min-width: 825px) and (max-width: 1275px) {
@@ -1673,13 +1691,11 @@ a:hover::before {
             &__noSew {
                 &_text {
                     margin-top: 1rem;
-                    //font-size: 2rem;
                 }
             }
             &__sew {
                 &_text {
                     margin-top: 1rem;
-                    //font-size: 2rem;
                 }
             }
         }
@@ -1688,7 +1704,7 @@ a:hover::before {
 @media screen and (min-width: 1275px) {
     .main-resources {
         .videos {
-            width: 85%;
+            width: 80%;
             &__noSew {
                 &_text {
                     margin-top: 1rem;
@@ -1995,3 +2011,216 @@ a:hover::before {
 // ! ------------ ! //
 // ! CONTACT PAGE ! //
 // ! ------------ ! //
+
+// * Contact Title * //
+.contact {
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: left;
+    color: $darkerTextPurple;
+    padding: 2rem 0;
+    width: 90%;
+
+    &__title {
+        margin-bottom: 0.7rem;
+        font-size: 2.5rem;
+        font-weight: $black;
+        text-shadow: $textShadowDark;
+    }
+    &__text {
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: $regular;
+        color: $darkTextPurple;
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-contact {
+        .contact {
+            width: 85%;
+
+            &__title {
+                font-size: 2.9rem;
+            }
+
+            &__text {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-contact {
+        .contact {
+            width: 80%;
+            text-align: left;
+
+            &__title {
+                font-size: 3.3rem;
+            }
+
+            &__text {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// * Contact Form * //
+.contactForm {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 3px solid $darkerTextPurple;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.enterInfo {
+    position: relative;
+    padding: 15px 0 0;
+    width: 100%;
+    max-width: 625px;
+    display: flex;
+    margin-bottom: 1rem;
+    font-weight: $bold;
+    &__form {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 3px solid $darkerTextPurple;
+        outline: 0;
+        font-size: 1.5rem;
+        color: $darkTextPurple;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s ease-out;
+        position: relative;
+        padding-bottom: 3px;
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:placeholder-shown ~ .enterInfo__label {
+            font-size: 1.5rem;
+            cursor: text;
+            top: 10px;
+        }
+
+        &:required,
+        &:invalid {
+            box-shadow: none;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: rgba($darkerTextPurple, 1);
+        z-index: -1;
+    }
+
+    &__form:focus {
+        ~ .enterInfo__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            color: rgba($darkerTextPurple, 1);
+        }
+        font-weight: $bold;
+        border-width: 3px;
+        border-image: linear-gradient(
+            90deg,
+            rgba(111, 50, 161, 1) 0%,
+            rgba(72, 25, 129, 1) 100%
+        );
+        border-image-slice: 1;
+    }
+}
+
+.enterButton {
+    color: $darkTextPurple;
+    display: inline-block;
+    border: 0.2rem solid $darkTextPurple;
+    border-radius: 3rem;
+    padding: 0.2rem 0.5rem;
+    text-align: left;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: 8ch;
+    font-size: 1.6rem;
+    transition: background-color 200ms ease-out, color 200ms ease-out;
+}
+
+.enterButton:hover,
+.enterButton:focus {
+    background-color: $darkTextPurple;
+    color: white;
+    transition: background-color 300ms ease-in, color 300ms ease-in;
+}
+
+@media screen and (min-width: 625px) and (max-width: 1275px) {
+    .main-contact {
+        .enterInfo {
+            &__form {
+                font-size: 2.2rem;
+
+                &::placeholder {
+                    color: transparent;
+                }
+
+                &:placeholder-shown ~ .enterInfo__label {
+                    font-size: 2.2rem;
+                }
+            }
+
+            &__label {
+                font-size: 1.1rem;
+            }
+
+            &__form:focus {
+                ~ .enterInfo__label {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-contact {
+        .enterInfo {
+            &__form {
+                font-size: 2.6rem;
+
+                &::placeholder {
+                    color: transparent;
+                }
+
+                &:placeholder-shown ~ .enterInfo__label {
+                    font-size: 2.6rem;
+                }
+            }
+
+            &__label {
+                font-size: 1.1rem;
+            }
+
+            &__form:focus {
+                ~ .enterInfo__label {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
