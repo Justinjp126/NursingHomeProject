@@ -4,11 +4,13 @@ const swup = new Swup({
 
 /**
  * Slides out the menu when you press menu on mobile/small screens
+ * And ensures it works after Swup transition
  */
 const navSlide = () => {
     const menu = document.querySelector(".menu");
     const nav = document.querySelector(".nav__links");
     const navLinks = document.querySelectorAll(".nav__links li");
+
     menu.addEventListener("click", () => {
         //toggle
         nav.classList.toggle("nav--active");
@@ -23,6 +25,19 @@ const navSlide = () => {
                     0.3}s`;
             }
         });
+
+        for (var i = 0; i < navLinks.length; i++) {
+            navLinks[i].addEventListener("click", evt => {
+                if (nav.classList.contains("nav--active")) {
+                    nav.classList.toggle("nav--active");
+                }
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = "";
+                    }
+                });
+            });
+        }
     });
 };
 
@@ -45,11 +60,50 @@ const stickyNav = () => {
     });
 };
 
+/**
+ * Add active and not-active classes to nav links
+ */
+
+const hoverNavEffects = () => {
+    var links = document.querySelectorAll(".nav__links li a");
+
+    for (var i = 0; i < links.length; i++) {
+        links[i].classList.remove("current");
+    }
+
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", evt => {
+            var target = evt.target || evt.srcElement;
+            target.classList.remove("not-active", "current");
+            target.classList.add("active", "current");
+
+            for (var j = 0; j < links.length; j++) {
+                if (
+                    !links[j].classList.contains("current") &&
+                    links[j].classList.contains("active")
+                ) {
+                    console.log("added classes");
+                    links[j].classList.remove("active");
+                    links[j].classList.add("not-active");
+                }
+            }
+        });
+    }
+};
+
 const init = () => {
-    navSlide();
     stickyNav();
+    navSlide();
+    hoverNavEffects();
+};
+
+const replaceContent = () => {
+    hoverNavEffects();
+    navSlide();
 };
 
 init();
 
 swup.on("contentReplaced", init);
+
+swup.on("willReplaceContent", replaceContent);

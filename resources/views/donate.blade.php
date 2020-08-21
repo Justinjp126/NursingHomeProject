@@ -29,7 +29,6 @@
             <h4>Menu</h4>
         </div>
     </nav>
-
     <main class="main-donate transition-fade" id="swup">
         <div class="donate">
             <h1 class="donate__title">Donate</h1>

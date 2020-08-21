@@ -29,7 +29,6 @@
             <h4>Menu</h4>
         </div>
     </nav>
-
     <main class="main-resources transition-fade" id="swup">
         <div class="resources">
             <h1 class="resources__title">Resources</h1>

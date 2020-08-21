@@ -29,7 +29,6 @@
             <h4>Menu</h4>
         </div>
     </nav>
-
     <main class="main-contact transition-fade" id="swup">
         <div class="contact">
             <h1 class="contact__title">Contact</h1>

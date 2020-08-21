@@ -214,7 +214,7 @@ body {
             right: 0;
             height: 92vh;
             top: 8vh;
-            background-color: $navBarPurple;
+            background-color: rgba($navBarPurple, 0.95);
             display: flex;
             flex-direction: column;
             align-items: center;

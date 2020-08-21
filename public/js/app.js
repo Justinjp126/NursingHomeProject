@@ -65,9 +65,11 @@ const filterLocations = () => {
 /**
  * Takes user's lang and log if they allow it and then
  * finds their zip code using an API and filters the
- * table based on their zip code
+ * table based on their zip code and scrolls into view
  */
 function showPosition() {
+    document.getElementById("scrollLocation").scrollIntoView(true);
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             fetch(

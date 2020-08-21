@@ -39,7 +39,6 @@
             <h4>Menu</h4>
         </div>
     </nav>
-
     <main class="main-participate transition-fade" id="swup">
         <div class="findLocations">
             <div class="findLocations__content" id="findLocations__content">
@@ -48,7 +47,7 @@
                     need
                     nearest
                     to you with your zip code</div>
-                <a class="findLocations__content_button" href="#scrollLocation" onclick="showPosition();">Find
+                <a class="findLocations__content_button" onclick="showPosition();">Find
                     Locations</a>
             </div>
         </div>
@@ -110,7 +109,7 @@
             </table>
         </div>
 
-        <footer class="footerMain">
+        <footer class="footerMain" id="footer">
             <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
             <div class="footerMain__svg">
                 <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footerMain__svg_instagram"></a>
