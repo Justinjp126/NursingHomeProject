@@ -28,6 +28,6 @@ Route::get('/resources', function () {
 Route::get('/donate', function () {
     return view('donate');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', 'SendEmailController@index');
+
+Route::post('/contact/send', 'SendEmailController@send');

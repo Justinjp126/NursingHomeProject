@@ -38,44 +38,74 @@
         </div>
 
         <div class="contactForm">
-            <div class="nameAndEmail">
+
+            @if(count($errors) > 0)
+            <script>
+                Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Please Fill Out All Fields Correctly!" ,
+                showClass: {
+                    popup: "animate__animated animate__fadeIn animate__faster "
+                },
+                hideClass: {
+                    popup: "animate__animated animate__fadeOut animate__faster"
+                }
+            });
+            </script>
+            @endif
+
+            @if($message = Session::get('success'))
+            <script>
+                Swal.fire({
+                icon: "success",
+                title: "Success",
+                text: "We will get back to you as soon as possible!" ,
+                showClass: {
+                    popup: "animate__animated animate__fadeIn animate__faster "
+                },
+                hideClass: {
+                    popup: "animate__animated animate__fadeOut animate__faster"
+                }
+            });
+            </script>
+            @endif
+            <form method="post" action="{{ url('contact/send'  )}}">
+                {{ csrf_field() }}
+                <div class="nameAndEmail">
+                    <div class="enterInfo" id="enterInfo">
+                        <input class="enterInfo__form" id="enterName__form" placeholder="Name" type="text" value=""
+                            name="name"></input>
+                        <label class="enterInfo__label" id="enterInfo__label">Name</label>
+                    </div>
+                    <div class="enterInfo enterEmail" id="enterInfo">
+                        <input class="enterInfo__form" id="enterEmail__form" placeholder="Email" type="email" value=""
+                            name="email"></input>
+                        <label class="enterInfo__label" id="enterInfo__label">Email</label>
+                    </div>
+                </div>
                 <div class="enterInfo" id="enterInfo">
-                    <input class="enterInfo__form no-text-form" id="enterName__form" placeholder="Name" type="input"
-                        required value="" autocomplete="off"></input>
-                    <label class="enterInfo__label" id="enterInfo__label">Name</label>
+                    <textArea class="enterInfo__form" id="enterMessage__form" placeholder="Message" type="input"
+                        value="" name="message"></textArea>
+                    <label class="enterInfo__label" id="enterInfo__label">Message</label>
                 </div>
-                <div class="enterInfo enterEmail" id="enterInfo">
-                    <input class="enterInfo__form no-text-form" id="enterEmail__form" placeholder="Email" type="email"
-                        required value="" autocomplete="off"></input>
-                    <label class="enterInfo__label" id="enterInfo__label">Email</label>
+
+                <div class="enterButtonAndText">
+                    <input class="enterButton" value="Send" type="submit" name="send"></input>
+                    <p class="emailText">Or email us <a href="mailto:covid19maskinitiative@gmail.com"
+                            data-content="here">here</a></p>
                 </div>
-            </div>
-            <div class="enterInfo" id="enterInfo">
-                <textArea class="enterInfo__form no-text-form" id="enterMessage__form" placeholder="Message"
-                    type="input" required value="" autocomplete="off"></textArea>
-                <label class="enterInfo__label" id="enterInfo__label">Message</label>
-            </div>
+            </form>
+        </div>
 
-            <div class="enterButtonAndText">
-                <a class="enterButton" onclick="sendEmail();">
-                    <h3 class="enterButton__text">Send</h3>
-                </a>
-                <p class="emailText">Or email us <a href="mailto:covid19maskinitiative@gmail.com"
-                        data-content="here">here</a></p>
+        <footer class="footerMain">
+            <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
+            <div class="footerMain__svg">
+                <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footerMain__svg_instagram"></a>
+                <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footerMain__svg_twitter"></a>
+                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footerMain__svg_facebook"></a>
             </div>
-
-            <?php
-            ?>
-
-            <footer class="footerMain">
-                <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
-                <div class="footerMain__svg">
-                    <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon"
-                            class="footerMain__svg_instagram"></a>
-                    <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footerMain__svg_twitter"></a>
-                    <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footerMain__svg_facebook"></a>
-                </div>
-            </footer>
+        </footer>
         </div>
 
         <script src="http://code.jquery.com/jquery-3.5.1.min.js"
