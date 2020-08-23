@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="../css/style.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Home</title>
+    <title>Home - Nursing Home Mask Initiative</title>
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="../js/SwupOverlayTheme.js"></script>
     <script defer src="../js/swup.js"></script>
@@ -50,8 +51,8 @@
         </div>
 
         <div class="ourMission">
-            <div class="ourMission__title">Our Mission</div>
-            <div class="ourMission__text">We want to save lives by helping crafters and sewers like you to make masks
+            <h1 class="ourMission__title">Our Mission</h1>
+            <div class="ourMission__text">We want to save lives by helping crafters and sewers like you make masks
                 for nursing homes and personal care facilities in need.</div>
         </div>
 
@@ -61,7 +62,8 @@
                 <div class="getInvolved__donate_image">
                     <img src="../svg/donate.svg" alt="Piggy Bank">
                 </div>
-                <a href="/donate"><button class="getInvolved__donate_button" href="/donate">Donate</button></a>
+                <a href="/donate"><button class="getInvolved__donate_button" href="/donate"
+                        onclick="hoverNavEffects();">Donate</button></a>
             </div>
             <div class="getInvolved__sew">
                 <div class="getInvolved__sew_image">

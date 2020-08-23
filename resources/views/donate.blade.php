@@ -8,7 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Donate</title>
+    <title>Donate - Nursing Home Mask Initiative</title>
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="../js/SwupOverlayTheme.js"></script>
     <script defer src="../js/swup.js"></script>
@@ -42,7 +42,8 @@
                 <p class="organizations__text"><span class="organizations__text_link"><a
                             href="https://operationfacemask.com/donate/" target="_blank"
                             data-content="Operation Facemask">Operation
-                            Facemask</a> is a Pittsburgh-based group of volunteer working to meet the city's mask needs.
+                            Facemask</a> is a Pittsburgh-based group of volunteers working to meet the city's mask
+                        needs.
                         They accept monetary donation, and donation of materials. </span></p>
                 <p class="organizations__text"><span class="organizations__text_link"><a
                             href="https://www.nndoh.org/donate.html" target="_blank"

@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Participate</title>
+    <title>Participate - Nursing Home Mask Initiative</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
@@ -42,11 +42,11 @@
     <main class="main-participate transition-fade" id="swup">
         <div class="findLocations">
             <div class="findLocations__content" id="findLocations__content">
-                <div class="findLocations__content_title">Get Involved</div>
-                <div class="findLocations__content_text">Find a participating nursing home or personal care facility in
+                <h1 class="findLocations__content_title">Get Involved</h1>
+                <p class="findLocations__content_text">Find a participating nursing home or personal care facility in
                     need
                     nearest
-                    to you with your zip code</div>
+                    to you</p>
                 <a class="findLocations__content_button" onclick="showPosition();">Find
                     Locations</a>
             </div>
@@ -55,7 +55,7 @@
         <div class="scrollLocation" id="scrollLocation"></div>
 
         <div class="enterZip" id="enterZip">
-            <img class="enterZip__svg" src="../svg/magGlass.svg">
+            <img class="enterZip__svg" src="../svg/magGlass.svg" alt="Eye Glass SVG">
             <input class="enterZip__form no-text-form" id="enterZip__form" placeholder="Enter Zip" name="zip"
                 type="input" required pattern="[0-9]{5}" maxlength="5" onkeypress="return isNumber(event);"
                 onkeyup="filterLocations();" value="" autocomplete="off"></input>

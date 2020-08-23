@@ -82,7 +82,6 @@ const hoverNavEffects = () => {
                     !links[j].classList.contains("current") &&
                     links[j].classList.contains("active")
                 ) {
-                    console.log("added classes");
                     links[j].classList.remove("active");
                     links[j].classList.add("not-active");
                 }
@@ -104,6 +103,6 @@ const replaceContent = () => {
 
 init();
 
-swup.on("contentReplaced", init);
-
-swup.on("willReplaceContent", replaceContent);
+swup.on("contentReplaced", function() {
+    init();
+});
