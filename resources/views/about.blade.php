@@ -93,8 +93,8 @@
                     <div class="ourTeam__person_paragraph">Justin learned how to write HTML and CSS in his freshman year
                         of
                         high school. He was brought in to work on this project by his friend Amish, and he has been
-                        helping
-                        revamp the original website created Lydia. He hopes to see this website help nursing homes get
+                        redesigning and
+                        revamping the original website. He hopes to see this website help nursing homes get
                         masks
                         and become a better web developer through this project. </div>
                 </div>

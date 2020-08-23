@@ -2074,16 +2074,17 @@ video {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    border: 3px solid $darkerTextPurple;
-    border-radius: 2rem;
-    padding: 2rem;
+}
+
+.nameAndEmail {
+    display: flex;
+    flex-direction: column;
 }
 
 .enterInfo {
     position: relative;
     padding: 15px 0 0;
     width: 100%;
-    max-width: 625px;
     display: flex;
     margin-bottom: 1rem;
     font-weight: $bold;
@@ -2147,40 +2148,76 @@ video {
     }
 }
 
+.enterButtonAndText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#enterMessage__form {
+    padding-bottom: 2rem;
+}
+
 .enterButton {
-    color: $darkTextPurple;
-    display: inline-block;
-    border: 0.2rem solid $darkTextPurple;
+    color: white;
+    background-color: $darkTextPurple;
     border-radius: 3rem;
-    padding: 0.2rem 0.5rem;
-    text-align: left;
+    text-align: center;
     outline: none;
     text-decoration: none;
+    font-size: 1.3rem;
     cursor: pointer;
-    width: 8ch;
-    font-size: 1.6rem;
     transition: background-color 200ms ease-out, color 200ms ease-out;
+    display: inline-block;
+    min-width: 6rem;
+    width: 15%;
+    margin: 1rem 0;
 }
 
 .enterButton:hover,
 .enterButton:focus {
-    background-color: $darkTextPurple;
+    background-color: $darkerTextPurple;
     color: white;
     transition: background-color 300ms ease-in, color 300ms ease-in;
 }
 
-@media screen and (min-width: 625px) and (max-width: 1275px) {
+.emailText {
+    color: $darkTextPurple;
+    font-size: 1rem;
+    a {
+        color: $normalTextBlue;
+    }
+
+    a::before {
+        text-decoration: underline;
+        position: absolute;
+        content: attr(data-content);
+        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+        transition: clip-path 275ms ease;
+    }
+    a:hover::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
     .main-contact {
+        .emailText {
+            font-size: 1.2rem;
+        }
+        .contactForm {
+            width: 85%;
+        }
         .enterInfo {
             &__form {
-                font-size: 2.2rem;
+                font-size: 2rem;
 
                 &::placeholder {
                     color: transparent;
                 }
 
                 &:placeholder-shown ~ .enterInfo__label {
-                    font-size: 2.2rem;
+                    font-size: 2rem;
                 }
             }
 
@@ -2193,22 +2230,41 @@ video {
                     font-size: 1.1rem;
                 }
             }
+        }
+
+        .enterButton {
+            font-size: 1.7rem;
         }
     }
 }
 
 @media screen and (min-width: 1275px) {
+    .nameAndEmail {
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+
+    .enterEmail {
+        margin-left: 4rem;
+    }
+
     .main-contact {
+        .emailText {
+            font-size: 1.4rem;
+        }
+        .contactForm {
+            width: 80%;
+        }
         .enterInfo {
             &__form {
-                font-size: 2.6rem;
+                font-size: 2.4rem;
 
                 &::placeholder {
                     color: transparent;
                 }
 
                 &:placeholder-shown ~ .enterInfo__label {
-                    font-size: 2.6rem;
+                    font-size: 2.4rem;
                 }
             }
 
@@ -2222,5 +2278,13 @@ video {
                 }
             }
         }
+
+        .enterButton {
+            font-size: 1.9rem;
+        }
+    }
+
+    #enterMessage__form {
+        padding-bottom: 4rem;
     }
 }

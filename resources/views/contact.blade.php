@@ -9,6 +9,8 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Contact</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="../js/SwupOverlayTheme.js"></script>
     <script defer src="../js/swup.js"></script>
@@ -36,25 +38,48 @@
         </div>
 
         <div class="contactForm">
-            <div class="enterInfo" id="enterInfo">
-                <input class="enterInfo__form no-text-form" id="enterInfo__form" placeholder="Name" type="input"
-                    required value="" autocomplete="off"></input>
-                <label class="enterInfo__label" id="enterInfo__label">Name</label>
+            <div class="nameAndEmail">
+                <div class="enterInfo" id="enterInfo">
+                    <input class="enterInfo__form no-text-form" id="enterName__form" placeholder="Name" type="input"
+                        required value="" autocomplete="off"></input>
+                    <label class="enterInfo__label" id="enterInfo__label">Name</label>
+                </div>
+                <div class="enterInfo enterEmail" id="enterInfo">
+                    <input class="enterInfo__form no-text-form" id="enterEmail__form" placeholder="Email" type="email"
+                        required value="" autocomplete="off"></input>
+                    <label class="enterInfo__label" id="enterInfo__label">Email</label>
+                </div>
             </div>
             <div class="enterInfo" id="enterInfo">
-                <input class="enterInfo__form no-text-form" id="enterInfo__form" placeholder="Email" type="input"
-                    required value="" autocomplete="off"></input>
-                <label class="enterInfo__label" id="enterInfo__label">Email</label>
-            </div>
-            <div class="enterInfo" id="enterInfo">
-                <textArea class="enterInfo__form no-text-form" id="enterInfo__form" placeholder="Message" type="input"
-                    required value="" autocomplete="off"></textArea>
+                <textArea class="enterInfo__form no-text-form" id="enterMessage__form" placeholder="Message"
+                    type="input" required value="" autocomplete="off"></textArea>
                 <label class="enterInfo__label" id="enterInfo__label">Message</label>
             </div>
 
-            <a class="enterButton">
-                <h3 class="enterButton__text">Contact</h3>
-            </a>
+            <div class="enterButtonAndText">
+                <a class="enterButton" onclick="sendEmail();">
+                    <h3 class="enterButton__text">Send</h3>
+                </a>
+                <p class="emailText">Or email us <a href="mailto:covid19maskinitiative@gmail.com"
+                        data-content="here">here</a></p>
+            </div>
+
+            <?php
+            ?>
+
+            <footer class="footerMain">
+                <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
+                <div class="footerMain__svg">
+                    <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon"
+                            class="footerMain__svg_instagram"></a>
+                    <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footerMain__svg_twitter"></a>
+                    <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footerMain__svg_facebook"></a>
+                </div>
+            </footer>
         </div>
+
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="../js/app.js"></script>
     </main>
 </body>
