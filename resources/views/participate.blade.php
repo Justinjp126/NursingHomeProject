@@ -88,7 +88,7 @@
                     $colNames = ["Nursing Home", "Needs", "Address", "Zip Code", "Mask Type", "Mask Fabric", "Mailing Address", "Other Information", "Donate Masks"];
                     foreach($row as $value) {
                         if ($colNames[$counter] == "Other Information") {
-                            echo "<td><span>$colNames[$counter]</span> <a class='alert' data-text='$value' data-content='More Information' onclick='otherInfoAlert(this);'>More Information</a></td>";
+                            echo "<td><span>$colNames[$counter]</span> <a class='alert moreInformation' data-text='$value' data-content='More Information' >More Information</a></td>";
                         } 
                         else if ($colNames[$counter] == "Donate Masks") {
                             echo "<td><span>$colNames[$counter]</span> <button class='donate-button' data-content='Donate' href='#'>Donate</button></td>";

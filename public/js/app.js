@@ -8,23 +8,6 @@ const isNumber = evt => {
 };
 
 /**
- * Creates Sweet Alert and animates it
- */
-const otherInfoAlert = evt => {
-    Swal.fire({
-        title: "Other Information",
-        html: evt.getAttribute("data-text"),
-        showClass: {
-            popup: "animate__animated animate__fadeIn animate__faster "
-        },
-        hideClass: {
-            popup: "animate__animated animate__fadeOut animate__faster"
-        },
-        confirmButtonColor: "#4b2073"
-    });
-};
-
-/**
  * Takes input and filters the graph based on input
  */
 const filterLocations = () => {
@@ -92,7 +75,8 @@ function showPosition() {
                             hideClass: {
                                 popup:
                                     "animate__animated animate__fadeOut animate__faster"
-                            }
+                            },
+                            confirmButtonColor: "#4b2073"
                         });
                         return;
                     }
@@ -117,7 +101,8 @@ function showPosition() {
                         hideClass: {
                             popup:
                                 "animate__animated animate__fadeOut animate__faster"
-                        }
+                        },
+                        confirmButtonColor: "#4b2073"
                     });
                 });
         });
@@ -131,7 +116,8 @@ function showPosition() {
             },
             hideClass: {
                 popup: "animate__animated animate__fadeOut animate__faster"
-            }
+            },
+            confirmButtonColor: "#4b2073"
         });
     }
 }
