@@ -30,6 +30,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->from("justinjp126@gmail.com")->subject('New Nursing Home Mask Message!')->view('email_template')->with('data', $this->data);
+        return $this->from("covid19maskinitiative@gmail.com")->subject('New Nursing Home Mask Message!')->view('email_template')->with('data', $this->data);
     }
 }

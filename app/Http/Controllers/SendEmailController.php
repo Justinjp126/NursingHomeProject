@@ -26,7 +26,7 @@ class SendEmailController extends Controller
             'email' => $request->email
         );
 
-        Mail::to('justinjp126@gmail.com')->send(new SendMail($data));
+        Mail::to('covid19maskinitiative@gmail.com')->send(new SendMail($data));
         return back()->with('success', 'Thanks for contact us!');
     }
 }
