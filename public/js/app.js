@@ -121,3 +121,27 @@ function showPosition() {
         });
     }
 }
+
+/**
+ * Changes the underline in the navbar when you click a
+ * page link that is outside of the navbar
+ * @param {*} page Page name
+ */
+const changeNavBar = evt => {
+    var links = document.querySelectorAll(".nav__links li a");
+    var target = "/" + evt;
+    for (var i = 0; i < links.length; i++) {
+        if (
+            !links[i].classList.contains("current") &&
+            links[i].classList.contains("active")
+        ) {
+            links[i].classList.remove("active");
+            links[i].classList.add("not-active");
+        }
+
+        if (links[i].getAttribute("href") === target) {
+            links[i].classList.remove("not-active", "current");
+            links[i].classList.add("active", "current");
+        }
+    }
+};
