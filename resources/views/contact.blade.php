@@ -26,6 +26,8 @@
             <li><a href="/resources" class="not-active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="active">Contact</a></li>
+            <li><a href="/register" id="registerButton">Register</a></li>
+            <li><a href="/login" id="loginButton">Login</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -50,7 +52,8 @@
                     },
                     hideClass: {
                         popup: "animate__animated animate__fadeOut animate__faster"
-                    }
+                    },
+                    confirmButtonColor: "#ff6961",
                 });
             </script>
             @endif
@@ -66,7 +69,8 @@
                     },
                     hideClass: {
                         popup: "animate__animated animate__fadeOut animate__faster"
-                    }
+                    },
+                    confirmButtonColor: "#90EE90",
                 });
             </script>
             @endif

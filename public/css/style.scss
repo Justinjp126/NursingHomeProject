@@ -117,7 +117,7 @@ body {
     &__links {
         display: flex;
         justify-content: space-around;
-        width: 60%;
+        width: 70%;
 
         li {
             list-style: none;
@@ -126,7 +126,6 @@ body {
                 position: relative;
                 padding-bottom: 0.25rem;
                 letter-spacing: 1px;
-                font-weight: $regular;
                 color: $normalTextPurple;
                 text-decoration: none;
                 font-size: 1.3rem;
@@ -157,6 +156,29 @@ body {
                 -webkit-transform: translateY(0px);
                 -moz-transform: translateY(0px);
                 transform: translateY(0px);
+            }
+
+            #loginButton,
+            #registerButton {
+                padding: 0.2rem 0.6rem;
+                color: $normalTextPurple;
+                border: none;
+                background: none;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                border-radius: 3rem;
+                border: 0.15rem solid $normalTextPurple;
+                transition: background-color 200ms ease-in, color 200ms ease-in;
+            }
+
+            #loginButton:hover,
+            #registerButton:hover,
+            #loginButton:focus,
+            #registerButton:focus {
+                color: white;
+                background-color: $normalTextPurple;
+                transition: background-color 300ms ease-in, color 300ms ease-in;
             }
 
             .active::after {
@@ -195,7 +217,7 @@ body {
 
 @media screen and (max-width: 1024px) {
     .nav__links {
-        width: 70%;
+        width: 80%;
         li {
             a {
                 font-size: 1.3rem;
@@ -204,7 +226,7 @@ body {
     }
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 900px) {
     body {
         overflow-x: hidden;
     }
@@ -1463,8 +1485,13 @@ a:hover::before {
     table tbody tr td:nth-child(3),
     table tbody tr td:nth-child(4),
     table tbody tr td:nth-child(5),
-    table tbody tr td:nth-child(6) {
+    table tbody tr td:nth-child(6),
+    table tbody tr td:nth-child(7) {
         border-bottom: 2px solid $darkerTextPurple;
+    }
+
+    #donate-button {
+        border-right: 2px solid $darkerTextPurple;
     }
 
     table tbody tr td:nth-child(odd) {
@@ -1527,6 +1554,10 @@ a:hover::before {
     table tbody tr td:nth-child(6),
     table tbody tr td:nth-child(7) {
         border-bottom: 2px solid $darkerTextPurple;
+    }
+
+    #donate-button {
+        border-right: 2px solid $darkerTextPurple;
     }
 
     table tbody tr td:nth-child(odd) {

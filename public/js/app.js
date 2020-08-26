@@ -76,7 +76,7 @@ function showPosition() {
                                 popup:
                                     "animate__animated animate__fadeOut animate__faster",
                             },
-                            confirmButtonColor: "#4b2073",
+                            confirmButtonColor: "#ff6961",
                         });
                         return;
                     }
@@ -102,7 +102,7 @@ function showPosition() {
                             popup:
                                 "animate__animated animate__fadeOut animate__faster",
                         },
-                        confirmButtonColor: "#4b2073",
+                        confirmButtonColor: "#ff6961",
                     });
                 });
         });
@@ -117,7 +117,7 @@ function showPosition() {
             hideClass: {
                 popup: "animate__animated animate__fadeOut animate__faster",
             },
-            confirmButtonColor: "#4b2073",
+            confirmButtonColor: "#ff6961",
         });
     }
 }

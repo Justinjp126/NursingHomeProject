@@ -27,6 +27,8 @@
             <li><a href="/resources" class="not-active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="not-active">Contact</a></li>
+            <li><a href="/register" id="registerButton">Register</a></li>
+            <li><a href="/login" id="loginButton">Login</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -70,23 +72,45 @@
                         <th>Donate Masks</th>
                     </tr>
                 </thead>
-                <tbody>                
-                @foreach($homes as $row)
-                <tr>
-                    @foreach($row as $value)
+                <tbody>
+                    @foreach($homes as $row)
+                    <tr>
+                        @foreach($row as $value)
                         @if($value == json_decode(json_encode($row), true)['Other Information'])
-                            <td><span>Other Information</span> <a class='alert' data-text={{$value}} data-content='More Information' onclick='otherInfoAlert(this)'>More Information</a></td>
+                        <td id='moreInformation'><span>Other Information</span> <a class='alert moreInformation'
+                                data-text='{{$value}}' data-content='More Information'>More Information</a></td>
+
                         @elseif($value == json_decode(json_encode($row), true)['Name'])
-                            <td><span id='nursingHomeTab'>Nursing Home</span>{{$value}}</td>
+                        <td><span id='nursingHomeTab'>Nursing Home</span>{{$value}}</td>
+
+                        @elseif($value == json_decode(json_encode($row), true)['Needs'])
+                        <td><span>Needs</span>{{$value}}</td>
+
+                        @elseif($value == json_decode(json_encode($row), true)['Address'])
+                        <td><span>Address</span>{{$value}}</td>
+
+                        @elseif($value == json_decode(json_encode($row), true)['Zip Code'])
+                        <td><span>Zip Code</span>{{$value}}</td>
+
+                        @elseif($value == json_decode(json_encode($row), true)['Mask Type'])
+                        <td><span>Mask Type</span>{{$value}}</td>
+
+                        @elseif($value == json_decode(json_encode($row), true)['Mask Fabric'])
+                        <td><span>Mask Fabric</span>{{$value}}</td>
+
+                        @elseif($value == json_decode(json_encode($row), true)['Mailing Address'])
+                        <td><span>Mailing Address</span>{{$value}}</td>
+
                         @else
-                            <td><span></span>{{$value}}</td>
+                        <td><span></span>{{$value}}</td>
                         @endif
+                        @endforeach
+                        <form method="GET" action="/participate/{{json_decode(json_encode($row), true)['Name']}}">
+                            <td id="donate-button"><span>Donate Masks</span> <button class='donate-button'
+                                    data-content='Donate'>Donate</button></td>
+                        </form>
+                    </tr>
                     @endforeach
-                    <form method="GET" action="/participate/{{json_decode(json_encode($row), true)['Name']}}">
-                    <td><span>Donate Masks</span> <button class='donate-button' data-content='Donate' href='#'>Donate</button></td>
-                    </form>
-                </tr>
-                @endforeach
                 </tbody>
             </table>
         </div>

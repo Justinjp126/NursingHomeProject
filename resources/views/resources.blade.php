@@ -26,6 +26,8 @@
             <li><a href="/resources" class="active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="not-active">Contact</a></li>
+            <li><a href="/register" id="registerButton">Register</a></li>
+            <li><a href="/login" id="loginButton">Login</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
