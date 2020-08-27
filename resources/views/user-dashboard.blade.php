@@ -33,8 +33,60 @@
             <h4>Menu</h4>
         </div>
     </nav>
-    <main class="main-dashboard transition-fade" id="swup">
 
+    <main class="main-dashboard transition-fade" id="swup">
+        <div class="dashboard">
+            <h2 class="dashboard__title">Welcome Justin</h2>
+            <p class="dashboard__text">Find your goals, current orders, and past orders here. Remember to press
+                fulfilled once you complete an order</p>
+        </div>
+
+        <div class="dashboardCards">
+            <div class="currentGoal">
+                <h3 class="currentGoal__title">Current Goal</h3>
+                <div class="currentGoal__barContainer">
+                    <div class="text-container">
+                        <p class="currentGoal__barContainer_level">Level 2</p>
+                        <p class="currentGoal__barContainer_goal">10 / 20 Masks</p>
+                    </div>
+                    <div class="currentGoal__barContainer_bar">
+                        <div class="currentGoal__barContainer_bar-width"></div>
+                    </div>
+                </div>
+                <a class="currentGoal__button" href="/participate">Donate More Masks</a>
+            </div>
+
+            <div class="currentOrders">
+                <h3 class="currentOrders__title">Current Orders</h3>
+                <h4 class="currentOrders__nursingHome" id="firstNursingHome">Redstone Highlands</h4>
+                <p class="currentOrders__masks">24 Masks</p>
+                <div class="currentOrders__buttons">
+                    <a href="" class="currentOrders__buttons_fulfilled">Fulfilled</a>
+                    <a href="" class="currentOrders__buttons_cancel">Cancel</a>
+                </div>
+            </div>
+
+            <div class="pastOrders">
+                <h3 class="pastOrders__title">Past Orders</h3>
+                <h4 class="pastOrders__nursingHome" id="firstNursingHome">Ark Manor</h4>
+                <p class="pastOrders__masks">10 Masks</p>
+                <a class="pastOrders__buttonFulfilled">Fulfilled</a>
+                <h4 class="pastOrders__nursingHome">Legionnaire Manor</h4>
+                <p class="pastOrders__masks">30 Masks</p>
+                <a class="pastOrders__buttonCancelled">Cancelled</a>
+            </div>
+        </div>
+
+        <footer class="footerMain">
+            <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
+            <div class="footerMain__svg">
+                <a href="https://www.instagram.com/covid19maskinitiative/?hl=en"><img src="../svg/instagram.svg"
+                        alt="Instagram Icon" class="footerMain__svg_instagram"></a>
+                <a href="https://twitter.com/covid_mask"><img src="../svg/twitter.svg" alt="Twitter Icon"
+                        class="footerMain__svg_twitter"></a>
+                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footerMain__svg_facebook"></a>
+            </div>
+        </footer>
     </main>
 
     <script src="../js/app.js"></script>

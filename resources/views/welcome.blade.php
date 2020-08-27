@@ -88,9 +88,12 @@
         <footer class="footer">
             <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
             <div class="footer__svg">
-                <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footer__svg_instagram"></a>
-                <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footer__svg_twitter"></a>
-                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footer__svg_facebook"></a>
+                <a href="https://www.instagram.com/covid19maskinitiative/?hl=en" target="_blank"><img
+                        src="../svg/instagram.svg" alt="Instagram Icon" class="footerMain__svg_instagram"></a>
+                <a href="https://twitter.com/covid_mask" target="_blank"><img src="../svg/twitter.svg"
+                        alt="Twitter Icon" class="footerMain__svg_twitter"></a>
+                <a href="#" target="_blank"><img src="../svg/facebook.svg" alt="Facebook Icon"
+                        class="footerMain__svg_facebook"></a>
             </div>
         </footer>
     </main>

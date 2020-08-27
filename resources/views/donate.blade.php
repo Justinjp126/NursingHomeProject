@@ -51,8 +51,8 @@
                         They accept monetary donation, and donation of materials. </span></p>
                 <p class="organizations__text"><span class="organizations__text_link"><a
                             href="https://www.nndoh.org/donate.html" target="_blank"
-                            data-content="The Navajo Nation COVID-19 Fund">The
-                            Navajo Nation COVID-19 Fund</a> has been established to help the Navajo Nation respond to
+                            data-content="The Navajo Nation COVID-19 Fund">The Navajo Nation COVID-19 Fund</a> has been
+                        established to help the Navajo Nation respond to
                         the COVID-19 pandemic. </span></p>
                 <p class="organizations__text"><span class="organizations__text_link"><a
                             href="https://www.globallinks.org/donate" target="_blank" data-content="Global Links">Global
@@ -79,9 +79,12 @@
         <footer class="footerMain">
             <h2 class="footerMain__title">&copy Nursing Home Mask Initiative</h2>
             <div class="footerMain__svg">
-                <a href="#"><img src="../svg/instagram.svg" alt="Instagram Icon" class="footerMain__svg_instagram"></a>
-                <a href="#"><img src="../svg/twitter.svg" alt="Twitter Icon" class="footerMain__svg_twitter"></a>
-                <a href="#"><img src="../svg/facebook.svg" alt="Facebook Icon" class="footerMain__svg_facebook"></a>
+                <a href="https://www.instagram.com/covid19maskinitiative/?hl=en" target="_blank"><img
+                        src="../svg/instagram.svg" alt="Instagram Icon" class="footerMain__svg_instagram"></a>
+                <a href="https://twitter.com/covid_mask" target="_blank"><img src="../svg/twitter.svg"
+                        alt="Twitter Icon" class="footerMain__svg_twitter"></a>
+                <a href="#" target="_blank"><img src="../svg/facebook.svg" alt="Facebook Icon"
+                        class="footerMain__svg_facebook"></a>
             </div>
         </footer>
 

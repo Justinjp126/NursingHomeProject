@@ -31,6 +31,7 @@
 7. Contact Page
     7.1 Contact Title
     7.2 Contact Form
+8. Dashboard Page
 
 */
 
@@ -44,6 +45,10 @@ $normalTextBlue: #2e3174;
 $mainSectionPurple: #fde3ff;
 $lighterSectionPurple: #fff6ff;
 $navBarPurple: #fde3ff;
+$greenButtonBackground: #7bfb88;
+$greenButtonText: #255225;
+$redButtonBackground: #fb7b7b;
+$redButtonText: #731c1c;
 
 // Font Weights
 $thin: 100;
@@ -658,7 +663,7 @@ body {
         font-size: 2rem;
     }
     &__svg {
-        display: none; //! Change to flex when able to
+        display: flex; //! Change to flex when able to
         justify-content: center;
         &_instagram {
             filter: $svgFilter;
@@ -1014,7 +1019,7 @@ body {
         font-size: 2rem;
     }
     &__svg {
-        display: none; //! Change to flex when able to
+        display: flex; //! Change to flex when able to
         justify-content: center;
         &_instagram {
             filter: $svgFilter;
@@ -2325,5 +2330,292 @@ video {
 
     #enterMessage__form {
         padding-bottom: 4rem;
+    }
+}
+
+// ! -------------- ! //
+// ! DASHBOARD PAGE ! //
+// ! -------------- ! //
+.dashboard {
+    margin: 0 auto;
+    margin-top: 6rem;
+    width: 90%;
+
+    &__title {
+        color: $darkerTextPurple;
+        font-size: 2.3rem;
+        margin-bottom: 0.4rem;
+        font-weight: $black;
+    }
+
+    &__text {
+        color: $darkTextPurple;
+        font-size: 1.3rem;
+        margin-left: 0.5rem;
+    }
+}
+
+.dashboardCards {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+
+.currentGoal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.7rem 1rem 1.2rem 1rem;
+    background-color: $lighterSectionPurple;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    &__title {
+        font-size: 1.8rem;
+        color: $darkerTextPurple;
+        font-weight: $bold;
+    }
+
+    &__barContainer {
+        color: $darkTextPurple;
+
+        .text-container {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            padding: 0 0.5rem;
+        }
+
+        &_bar {
+            margin-top: 0.2rem;
+            width: 100%;
+            background: none;
+            padding: 1.1rem 0;
+            border-radius: 5rem;
+            border: 0.2rem solid $darkTextPurple;
+            position: relative;
+            &-width {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc(50% + 0.2rem);
+                background-color: $darkTextPurple;
+                padding: 1.1rem 0.1rem;
+                margin: 0 -0.1rem;
+                border-top-left-radius: 5rem;
+                border-bottom-left-radius: 5rem;
+            }
+        }
+    }
+
+    &__button {
+        color: $darkTextPurple;
+        display: inline-block;
+        width: 100%;
+        margin-top: 1rem;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 0.3rem 0.5rem;
+        border: 0.2rem solid $darkTextPurple;
+        background: none;
+        transition: background 200ms ease-in, color 200ms ease-in;
+        border-radius: 5rem;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        color: $lighterSectionPurple;
+        background-color: $darkTextPurple;
+        transition: background 300ms ease-in, color 300ms ease-in;
+    }
+}
+
+.currentOrders {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.7rem 1rem 1.2rem 1rem;
+    background-color: $lighterSectionPurple;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    &__title {
+        font-size: 1.8rem;
+        color: $darkerTextPurple;
+        font-weight: $bold;
+    }
+
+    &__nursingHome {
+        margin-top: 0.3rem;
+        margin-left: 0.1rem;
+        font-size: 1.1rem;
+        color: $darkTextPurple;
+        font-weight: $bold;
+    }
+
+    &__nursingHome:not(#firstNursingHome) {
+        margin-top: 1rem;
+    }
+
+    &__masks {
+        margin: 0.2rem 0 0.2rem 0.1rem;
+        color: $normalTextPurple;
+    }
+
+    &__buttons {
+        margin-top: 0.7rem;
+        display: flex;
+        font-weight: $bold;
+        &_fulfilled {
+            text-decoration: none;
+            background-color: $greenButtonBackground;
+            color: $greenButtonText;
+            text-align: center;
+            width: 50%;
+            padding: 0.2em 0;
+            border-radius: 5rem;
+            margin-right: 0.5rem;
+            transition: background-color 200ms ease-in;
+        }
+
+        &_fulfilled:hover,
+        &_fulfilled:focus {
+            background-color: #46f958;
+            transition: background-color 300ms ease-out;
+        }
+
+        &_cancel {
+            text-decoration: none;
+            margin-left: 0.5rem;
+            background-color: $redButtonBackground;
+            color: $redButtonText;
+            text-align: center;
+            width: 50%;
+            padding: 0.2em 0;
+            border-radius: 5rem;
+            transition: background-color 200ms ease-in;
+        }
+
+        &_cancel:hover,
+        &_cancel:focus {
+            background-color: #fa6060;
+            transition: background-color 300ms ease-out;
+        }
+    }
+}
+
+.pastOrders {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.7rem 1rem 1.2rem 1rem;
+    background-color: $lighterSectionPurple;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    &__title {
+        font-size: 1.8rem;
+        color: $darkerTextPurple;
+        font-weight: $bold;
+    }
+
+    &__nursingHome {
+        margin-top: 0.3rem;
+        margin-left: 0.1rem;
+        font-size: 1.1rem;
+        color: $darkTextPurple;
+        font-weight: $bold;
+    }
+
+    &__nursingHome:not(#firstNursingHome) {
+        margin-top: 1rem;
+    }
+
+    &__masks {
+        margin: 0.2rem 0 0.2rem 0.1rem;
+        color: $normalTextPurple;
+    }
+
+    &__buttonFulfilled {
+        margin-top: 0.7rem;
+        display: inherit;
+        text-decoration: none;
+        background-color: $greenButtonBackground;
+        color: $greenButtonText;
+        text-align: center;
+        width: 100%;
+        padding: 0.2em 0;
+        border-radius: 5rem;
+        font-weight: $bold;
+        transition: background-color 200ms ease-in;
+    }
+
+    &__buttonFulfilled:hover,
+    &__buttonFulfilled:focus {
+        cursor: default;
+        background-color: #46f958;
+        transition: background-color 300ms ease-out;
+    }
+
+    &__buttonCancelled {
+        margin-top: 0.7rem;
+        display: inherit;
+        text-decoration: none;
+        background-color: $redButtonBackground;
+        color: $redButtonText;
+        text-align: center;
+        width: 100%;
+        padding: 0.2em 0;
+        border-radius: 5rem;
+        font-weight: $bold;
+        transition: background-color 200ms ease-in;
+    }
+
+    &__buttonCancelled:hover,
+    &__buttonCancelled:focus {
+        cursor: default;
+        background-color: #fa6060;
+        transition: background-color 300ms ease-out;
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .main-dashboard {
+        .dashboard {
+            width: 85%;
+
+            &__title {
+                font-size: 2.7rem;
+            }
+
+            &__text {
+                font-size: 1.7rem;
+            }
+        }
+
+        .dashboardCards {
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .main-dashboard {
+        .dashboard {
+            width: 80%;
+
+            &__title {
+                font-size: 3.1rem;
+            }
+
+            &__text {
+                font-size: 2.1rem;
+            }
+        }
+
+        .dashboardCards {
+            width: 80%;
+        }
     }
 }
