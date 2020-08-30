@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMailOther;
@@ -26,7 +27,8 @@ class JoinController extends Controller
      */
     public function index($nursing_home)
     {
-        return view('join')->with('nursing_home', $nursing_home);
+        $homes = DB::select('SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from nursing_homes');
+        return view('join')->with('homes', $homes);
     }
 
     /**

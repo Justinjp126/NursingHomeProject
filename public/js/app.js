@@ -145,3 +145,42 @@ const changeNavBar = (evt) => {
         }
     }
 };
+
+/**
+ * Triggers alert when user presses needs masks dropped off
+ */
+const needDeliveryAlert = () => {
+    var checkbox = document.getElementById("check");
+    var checkboxArrow = document.getElementById("checkboxArrow");
+
+    if (checkbox.checked) {
+        checkboxArrow.style.visibility = "hidden";
+
+        Swal.fire({
+            title: "Are you sure?",
+            text:
+                "Only select this option if you live within 10 miles of Wexford, PA. \n Please only choose this if absolutely need to",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1AA51A",
+            cancelButtonColor: "#FB0D00",
+            confirmButtonText: "Confirm",
+            showClass: {
+                popup: "animate__animated animate__fadeIn animate__faster ",
+            },
+            hideClass: {
+                popup: "animate__animated animate__fadeOut animate__faster",
+            },
+        }).then((result) => {
+            if (result.value) {
+                checkbox.checked = true;
+                checkboxArrow.style.visibility = "hidden";
+                setTimeout(function () {
+                    checkboxArrow.style.visibility = "visible";
+                }, 750);
+            } else {
+                checkbox.checked = false;
+            }
+        });
+    }
+};
