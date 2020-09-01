@@ -44,6 +44,11 @@
     9.5 Custom Radio Buttons
     9.6 Submit Button
 10. Login Page
+    10.1 Login Title
+    10.2 Login Form
+    10.5 Remember Me Checkbox
+    10.4 Login Button 
+11. Register Page
 
 */
 
@@ -3682,5 +3687,49 @@ video {
                 font-size: 1.2rem;
             }
         }
+    }
+}
+// ! ------------- ! //
+// ! REGISTER PAGE ! //
+// ! ------------- ! //
+.registerButton {
+    margin-top: 2rem;
+    font-family: inherit;
+    color: white;
+    background-color: $darkTextPurple;
+    border-radius: 3rem;
+    text-align: center;
+    padding: 0.2rem 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-out, color 200ms ease-out;
+    display: inline-block;
+    min-width: 7rem;
+    width: 20%;
+    max-width: 10rem; 
+}
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .registerButton {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (min-width: 1275px) {
+    .registerButton {
+        font-size: 2rem;
+    }
+    .registerFlexContainer {
+        display: flex;
+    }
+
+    #flexContainerPassword {
+        margin-top: 1rem;
+    }
+
+    #registerName, 
+    #registerPassword {
+        margin-right: 3rem;
     }
 }
