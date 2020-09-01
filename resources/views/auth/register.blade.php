@@ -27,8 +27,8 @@
             <li><a href="/resources" class="not-active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="not-active">Contact</a></li>
-            <li><a href="/register" class="not-active" id="registerButton">Register</a></li>
-            <li><a href="/login" class="not-active" id="loginButton">Login</a></li>
+            <li><a href="/register" id="registerButton">Register</a></li>
+            <li><a href="/login" id="loginButton">Login</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -38,7 +38,7 @@
     <main class="main-login" id="swup">
         <div class="login">
             <div class="login__title">Register</div>
-            <div class="login__text">Fill out the form to register</div>
+            <div class="login__text">Fill out the form to register a new account</div>
         </div>
 
         <form method="POST" action="{{ route('register') }}" class="loginForm">
@@ -104,17 +104,17 @@
                 @error('password')
                 <script>
                     Swal.fire({
-                icon: "error",
-                title: "Error",
-                text:  '{{$message}}',
-                showClass: {
-                    popup: "animate__animated animate__fadeIn animate__faster "
-                },
-                hideClass: {
-                    popup: "animate__animated animate__fadeOut animate__faster"
-                },
-                confirmButtonColor: "#ff6961",
-            });
+                        icon: "error",
+                        title: "Error",
+                        text:  '{{$message}}',
+                        showClass: {
+                            popup: "animate__animated animate__fadeIn animate__faster "
+                        },
+                        hideClass: {
+                            popup: "animate__animated animate__fadeOut animate__faster"
+                        },
+                        confirmButtonColor: "#ff6961",
+                    });
                 </script>
                 @enderror
 

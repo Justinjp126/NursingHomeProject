@@ -49,7 +49,9 @@
     10.5 Remember Me Checkbox
     10.4 Login Button 
 11. Register Page
-
+    11.1 Register Button
+12. Reset Password Page
+    12.1 Reset Button
 */
 
 // * Variables * //
@@ -3711,6 +3713,13 @@ video {
     width: 20%;
     max-width: 10rem; 
 }
+
+.registerButton:hover,
+.registerButton:focus {
+    background-color: $darkerTextPurple;
+    color: white;
+    transition: background-color 300ms ease-in, color 300ms ease-in;
+}
 @media screen and (min-width: 825px) and (max-width: 1275px) {
     .registerButton {
         font-size: 1.8rem;
@@ -3731,5 +3740,45 @@ video {
     #registerName, 
     #registerPassword {
         margin-right: 3rem;
+    }
+}
+
+// ! ------------------- ! //
+// ! RESET PASSWORD PAGE ! //
+// ! ------------------- ! //
+.resetButton {
+    margin-top: 1.5rem;
+    font-family: inherit;
+    color: white;
+    background-color: $darkTextPurple;
+    border-radius: 3rem;
+    text-align: center;
+    padding: 0.2rem 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-out, color 200ms ease-out;
+    display: inline-block;
+    min-width: 7rem;
+    width: 20%;
+    max-width: 10rem; 
+}
+
+.resetButton:hover,
+.resetButton:focus {
+    background-color: $darkerTextPurple;
+    color: white;
+    transition: background-color 300ms ease-in, color 300ms ease-in;
+}
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .resetButton {
+        font-size: 1.7rem;
+    }
+}
+@media screen and (min-width: 1275px) {
+    .resetButton {
+        font-size: 1.9rem;
     }
 }

@@ -73,11 +73,11 @@ const hoverNavEffects = () => {
 
     for (var i = 0; i < links.length; i++) {
         links[i].addEventListener("click", (evt) => {
-            if(links[i].id !== "loginButton" && links[i].id !== "registerButton") {
                 var target = evt.target || evt.srcElement;
-                target.classList.remove("not-active", "current");
-                target.classList.add("active", "current");
-            } 
+                if(target.id !== "loginButton" && target.id !== "registerButton") {
+                    target.classList.remove("not-active", "current");
+                    target.classList.add("active", "current");
+                } 
             for (var j = 0; j < links.length; j++) {
                 if (
                     !links[j].classList.contains("current") &&
