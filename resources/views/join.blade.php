@@ -51,14 +51,14 @@
         <div class="donateMasksFormContainer donateMasksMarginContainer">
           <input type="text" id="email" name="email" value="{{Auth::user()->email}}"
             class="donateMasksFormContainer__form" placeholder="Email">
-          <label for="Email" class="donateMasksFormContainer__label">Email</label>
+          <label for="email" class="donateMasksFormContainer__label">Email</label>
         </div>
       </div>
       <div class="donateMasksFlexContainer">
         <div class="donateMasksFormContainer">
           <input type="text" id="phone" name="phone" class="donateMasksFormContainer__form" placeholder="Phone Number"
             onkeypress="return isNumber(event);" maxlength="10" value="">
-          <label for="Phone" class="donateMasksFormContainer__label">Phone Number</label>
+          <label for="phone" class="donateMasksFormContainer__label">Phone Number</label>
         </div>
         <label class="customSelect" for="nhome" id="dropdownMenu">
           <select id="nhome" name="options" name="nhome">
@@ -78,7 +78,7 @@
         <div class="donateMasksFormContainer" id="numberOfMasks">
           <input type="text" id="nmasks" name="nmasks" value="" class="donateMasksFormContainer__form"
             placeholder="Number of Masks">
-          <label for="masks" class="donateMasksFormContainer__label">Number of Masks</label>
+          <label for="nmasks" class="donateMasksFormContainer__label">Number of Masks</label>
         </div>
         <div class="donateMasksFormContainer donateMasksMarginContainer">
           <input type="text" id="mats" name="mats" value="" class="donateMasksFormContainer__form"
