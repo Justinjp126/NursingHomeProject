@@ -1426,16 +1426,10 @@ table td span {
     display: inline-block;
 }
 
-a::before {
-    text-decoration: underline;
-    position: absolute;
-    content: attr(data-content);
-    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-    transition: clip-path 275ms ease;
+a {
+    color: $normalTextBlue;
 }
-a:hover::before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
+
 
 .donate-button {
     display: inline-block;

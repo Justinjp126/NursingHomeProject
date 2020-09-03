@@ -54,7 +54,7 @@
                         <img class="ourTeam__person_container-svg" src="../svg/lydia.svg" id="lydiaSvg"
                             alt="Lydia Illustration">
                         <h3 class="ourTeam__person_container-title">Lydia Berger
-                            <div class="ourTeam__person_container-title-school">Rising Senior at
+                            <div class="ourTeam__person_container-title-school">Senior at
                                 Norwin High School</div>
                         </h3>
 
@@ -75,7 +75,7 @@
                         <img class="ourTeam__person_container-svg" src="../svg/amish.svg" id="amishSvg"
                             alt="Amish Illustration">
                         <h3 class="ourTeam__person_container-title">Amish Sethi<div
-                                class="ourTeam__person_container-title-school">Rising Junior at
+                                class="ourTeam__person_container-title-school">Junior at
                                 Pine-Richland High School</div>
                         </h3>
 
@@ -93,7 +93,7 @@
                             alt="Justin Illustration">
                         <h3 class="ourTeam__person_container-title">Justin
                             Puthenpurayil
-                            <div class="ourTeam__person_container-title-school">Rising Junior at
+                            <div class="ourTeam__person_container-title-school">Junior at
                                 Pine-Richland High School</div>
                         </h3>
 
