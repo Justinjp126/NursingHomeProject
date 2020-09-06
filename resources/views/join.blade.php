@@ -41,7 +41,7 @@
       <div class="donateMasks__text">Fill out the form to donate masks</div>
     </div>
 
-    <form action="/participate/submit" class="donateMasksContainer">
+    <form method="GET" action="/participate/submit" class="donateMasksContainer">
       <div class="donateMasksFlexContainer">
         <div class="donateMasksFormContainer">
           <input type="text" id="Name" name="Name" value="{{Auth::user()->name}}" class="donateMasksFormContainer__form"
@@ -62,14 +62,13 @@
         </div>
         <label class="customSelect" for="nhome" id="dropdownMenu">
           <select id="nhome" name="options" name="nhome">
-            <option value="yeo">
               @php
               $curPageName = $_SERVER['REQUEST_URI'];
               $page = explode('/', $curPageName);
               $user = $page[2];
               $nursingHome = str_replace('%20', ' ', $user);
               @endphp
-
+            <option value="{{$nursingHome}}">
               {{$nursingHome}}
             </option>
             @foreach($homes as $row)
