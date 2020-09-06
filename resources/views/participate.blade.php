@@ -105,10 +105,8 @@
                         <td><span></span>{{$value}}</td>
                         @endif
                         @endforeach
-                        <form method="GET" action="/participate/{{json_decode(json_encode($row), true)['Name']}}">
-                            <td id="donate-button"><span>Donate Masks</span> <button class='donate-button'
-                                    data-content='Donate'>Donate</button></td>
-                        </form>
+                            <td id="donate-button"><span>Donate Masks</span> <a class='donate-button'
+                                    href="/participate/{{json_decode(json_encode($row), true)['Name']}}">Donate</a></td> 
                     </tr>
                     @endforeach
                 </tbody>

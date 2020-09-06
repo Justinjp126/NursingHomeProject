@@ -62,9 +62,19 @@
         </div>
         <label class="customSelect" for="nhome" id="dropdownMenu">
           <select id="nhome" name="options" name="nhome">
+            <option value="yeo">
+              @php
+              $curPageName = $_SERVER['REQUEST_URI'];
+              $page = explode('/', $curPageName);
+              $user = $page[2];
+              $nursingHome = str_replace('%20', ' ', $user);
+              @endphp
+
+              {{$nursingHome}}
+            </option>
             @foreach($homes as $row)
             @foreach($row as $value)
-            @if($value == json_decode(json_encode($row), true)['Name'])
+            @if($value == json_decode(json_encode($row), true)['Name'] && $value !== $nursingHome)
             <option value="{{$value}}">
               {{$value}}
             </option>
