@@ -62,13 +62,13 @@
         </div>
         <label class="customSelect" for="nhome" id="dropdownMenu">
           <select id="nhome" name="options" name="nhome">
-              @php
-              $curPageName = $_SERVER['REQUEST_URI'];
-              $page = explode('/', $curPageName);
-              $user = $page[2];
-              $nursingHome = str_replace('%20', ' ', $user);
-              @endphp
-            <option value="{{$nursingHome}}">
+            @php
+            $curPageName = $_SERVER['REQUEST_URI'];
+            $page = explode('/', $curPageName);
+            $user = $page[2];
+            $nursingHome = str_replace('%20', ' ', $user);
+            @endphp
+            <option value={{$nursingHome}}>
               {{$nursingHome}}
             </option>
             @foreach($homes as $row)
