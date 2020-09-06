@@ -70,4 +70,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function authenticated(Request $request)
+    {
+        return redirect('/participate'); //put your redirect url here
+    }
 }
