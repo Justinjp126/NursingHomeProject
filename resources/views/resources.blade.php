@@ -31,9 +31,7 @@
             <li><a href="/login" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
-            <form method="GET" action="{{Auth::logout()}}">
-                <li><input class="logoutButton" type="submit" value="Logout"></li>
-            </form>
+            <li><a href="{{ url('/logout') }}" class="logoutButton" type="submit">Logout</a></li>
             @endif
         </ul>
         <div class="menu">
