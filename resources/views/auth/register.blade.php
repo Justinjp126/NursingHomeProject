@@ -96,8 +96,7 @@
 
             <div class="registerFlexContainer" id="flexContainerPassword">
                 <div class="loginPassword" id="registerPassword">
-                    <input type="password" id="password" name="password" placeholder="Password"
-                        class="loginPassword__form @error('password') is-invalid @enderror" required value="">
+                    <input type="password" id="password" class="loginPassword__form @error('password') is-invalid @enderror"  name="password" placeholder="Password" required autocomplete="new-password">
                     <label for="password" class="loginPassword__label">Password</label>
                 </div>
 
@@ -119,8 +118,7 @@
                 @enderror
 
                 <div class="loginPassword">
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
-                        class="loginPassword__form" required value="" autocomplete="new-password">
+                    <input type="password" id="password-confirm" name="password_confirmation" class="loginPassword__form" placeholder="Confirm Password" required autocomplete="new-password">
                     <label for="confirm-password" class="loginPassword__label">Confirm Password</label>
                 </div>
             </div>
