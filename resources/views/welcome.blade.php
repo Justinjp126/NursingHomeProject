@@ -89,6 +89,7 @@
                         onclick="changeNavBar('resources');">Learn</button></a>
             </div>
         </div>
+        {{dd(Auth::check())}}
 
         <footer class="footer">
             <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>
