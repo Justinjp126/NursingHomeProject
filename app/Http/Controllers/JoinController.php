@@ -41,25 +41,29 @@ class JoinController extends Controller
             'Name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'address' => 'required',
-            'nhome' => 'required',
+            'options' => 'required',
             'nmasks' => 'required',
             'mats' => 'required',
             'delivery' => 'required',
-            'myself' => 'required'
+            'check' => ''
         ]);
+        $help = 'He/she will do it by themselves.';
+        if($request->check == 'on')
+        {
+            $help = 'He/she needs someone else to drop off the masks for them.';
+        }
 
         $data = array(
             'Name' => $request->Name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'address' => $request->address,
-            'nhome' => $request->nhome,
+            'nhome' => $request->options,
             'nmasks' => $request->nmasks,
             'mats' => $request->mats,
             'delivery' => $request->delivery,
-            'myself' => $request->myself
+            'myself' => $help
         );
+
 
         Mail::to('covid19maskinitiative@gmail.com')->send(new SendMailOther($data));
         $user = Auth::user();

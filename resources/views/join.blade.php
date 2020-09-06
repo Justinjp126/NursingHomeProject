@@ -41,7 +41,7 @@
       <div class="donateMasks__text">Fill out the form to donate masks</div>
     </div>
 
-    <form action="/participate/submit" class="donateMasksContainer">
+    <form method="GET" action="/participate/submit" class="donateMasksContainer">
       <div class="donateMasksFlexContainer">
         <div class="donateMasksFormContainer">
           <input type="text" id="Name" name="Name" value="{{Auth::user()->name}}" class="donateMasksFormContainer__form"
