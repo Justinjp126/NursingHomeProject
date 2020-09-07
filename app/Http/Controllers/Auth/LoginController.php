@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use \Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -43,7 +43,12 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request)
     {
-        return redirect('/participate'); //put your redirect url here
+        Auth::login($user);
+        //dd(Auth::check());
+
+        if(Auth::check()) {
+            return redirect('/participate'); //put your redirect url here
+        }
     }
 
     public function logout(Request $request)
