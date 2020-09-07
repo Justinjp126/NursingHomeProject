@@ -29,7 +29,7 @@
             <li><a href="/contact" class="not-active">Contact</a></li>
             @if(!Auth::check())
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href="/login" id="loginButton">Login</a></li>
+            <li><a href=" {{ url(/login) }}" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
             <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
