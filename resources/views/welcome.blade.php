@@ -32,7 +32,7 @@
             <li><a href="/login" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
-            <li><a href="{{ url('/logout') }}" class="logoutButton" type="submit">Logout</a></li>
+            <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
             @endif
         </ul>
         <div class="menu">
