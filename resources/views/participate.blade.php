@@ -22,14 +22,14 @@
         <a href="/"><img class="nav__logo" src="../img/tempLogo.png" alt="Temporary Logo"></a>
         <ul class="nav__links">
             <li><a href="/" class="not-active">Home</a></li>
-            <li><a href="/about" class="active">About</a></li>
-            <li><a href="/participate" class="not-active">Participate</a></li>
+            <li><a href="/about" class="not-active">About</a></li>
+            <li><a href="/participate" class="active">Participate</a></li>
             <li><a href="/resources" class="not-active">Resources</a></li>
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="not-active">Contact</a></li>
             @if(!Auth::check())
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href=" {{ url(/login) }}" id="loginButton">Login</a></li>
+            <li><a href={{url("/login")}} id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
             <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
