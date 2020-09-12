@@ -28,7 +28,7 @@
             <li><a href="/contact" class="not-active">Contact</a></li>
             @if(!Auth::check())
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href={{url("/login")}} id="loginButton">Login</a></li>
+            <li><a href="{{ url('/login') }}" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
             <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
@@ -41,7 +41,7 @@
     <main class="main-about transition-fade" id="swup">
         <div class="aboutUs">
             <h1 class="aboutUs__title">About Us</h1>
-            <p class="aboutUs__text">The COVID-19 Mask Initiative was created by and is run by high school
+            <p class="aboutUs__text">The Nursing Home Mask Initiative was created by and is run by high school
                 students
                 in
                 the Pittsburgh area. Our goal is to mobilize local crafters and sewers to make masks for nursing
@@ -120,12 +120,12 @@
                 we
                 are all facing similar struggles. We can't fix everything, but we can band together and, little by
                 little, mask by mask, save lives. Together, we really can make a difference, and together we can support
-                each other to get through this crisis.</p>
+                each other to get through this crisis.</p><br>
             <h3 class="whyWeCare__nursingHome">Why Nursing Homes & Personal Care Facilities </h3>
             <p class="whyWeCare__paragraphTwo">Nursing homes and personal care facilities have been hit particularly
                 hard by COVID-19. In Pennsylvania alone, over half of deaths from COVID-19 have been residents of
                 nursing homes and personal care homes. At the same time, many of these facilities lack adequate
-                protective equipment such as masks for staff and residents, compounding the problem. <span><a
+                protective equipment such as masks for staff and residents, compounding the problem. <br> <span><a
                         data-content="The New York Times"
                         href="https://www.nytimes.com/2020/04/17/us/coronavirus-nursing-homes.html" target="_blank">The
                         New

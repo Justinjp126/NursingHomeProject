@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="JJzlgddLlnkKYPem17nLoesW8nk9dTP0ceaeUeL5Zi4" />
 
     <link rel="stylesheet" href="../css/style.min.css">
     <link
@@ -29,7 +30,7 @@
             <li><a href="/contact" class="not-active">Contact</a></li>
             @if(!Auth::check())
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href={{url("/login")}} id="loginButton">Login</a></li>
+            <li><a href="{{ url('/login') }}" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
             <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
@@ -89,7 +90,6 @@
                         onclick="changeNavBar('resources');">Learn</button></a>
             </div>
         </div>
-        {{dd(Auth::check())}}
 
         <footer class="footer">
             <h2 class="footer__title">&copy Nursing Home Mask Initiative</h2>

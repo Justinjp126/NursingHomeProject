@@ -28,7 +28,7 @@
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="not-active">Contact</a></li>
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href="{{ url(/login) }}" id="loginButton">Login</a></li>
+            <li><a href="{{ url('/login') }}" id="loginButton">Login</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -38,7 +38,7 @@
     <main class="main-login" id="swup">
         <div class="login">
             <div class="login__title">Register</div>
-            <div class="login__text">Fill out the form to register a new account</div>
+            <div class="login__text">Fill out the form to create a new account. Crafter dashboard coming soon!</div>
         </div>
 
         <form method="POST" action="{{ route('register') }}" class="loginForm">
@@ -124,6 +124,7 @@
             </div>
 
             <input class="registerButton" type="submit" value="Register">
+            <!-- <a href="/login" class="registerButton" id="loginButton">Login</a> -->
 
         </form>
     </main>

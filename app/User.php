@@ -10,6 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $connection = 'mysql2';
     /* 
     Add credentials for DB_HOST_SECOND, etc. in .env file. 
     They should access the nhmi database using nhmiwriteonly
