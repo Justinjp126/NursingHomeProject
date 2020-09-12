@@ -28,7 +28,7 @@
             <li><a href="/contact" class="not-active">Contact</a></li>
             @if(!Auth::check())
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href={{url("/login")}} id="loginButton">Login</a></li>
+            <li><a href="{{ url('/login') }}" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
             <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
@@ -53,12 +53,15 @@
                             data-content="Operation Facemask">Operation
                             Facemask</a> is a Pittsburgh-based group of volunteers working to meet the city's mask
                         needs.
-                        They accept monetary donation, and donation of materials. </span></p>
+                        They accept monetary donation, and donation of materials</span></p>
                 <p class="organizations__text"><span class="organizations__text_link"><a
                             href="https://www.nndoh.org/donate.html" target="_blank"
-                            data-content="The Navajo Nation COVID-19 Fund">The Navajo Nation COVID-19 Fund</a> has been
-                        established to help the Navajo Nation respond to
-                        the COVID-19 pandemic. </span></p>
+                            data-content="The Navajo Nation COVID-19 Fund">The Navajo Nation COVID-19 Fund</a> is the official COVID-19 
+                            relief fund of the Navajo nation. Donations help save lives</span></p>
+                <p class="organizations__text"><span class="organizations__text_link"><a
+                            href="https://www.navajohopisolidarity.org" target="_blank"
+                            data-content="The Navajo Nation COVID-19 Fund">The Navajo and Hopi Families COVID-19 Relief Fund</a> is an indigenous-led
+                            group providing aid to communities on the Navajo and Hopi reservations. Donate to help people and save lives</span></p>
                 <p class="organizations__text"><span class="organizations__text_link"><a
                             href="https://www.globallinks.org/donate" target="_blank" data-content="Global Links">Global
                             Links</a> is
@@ -70,15 +73,15 @@
         <div class="donateInformation">
             <h2 class="donateInformation__title">Other Information</h2>
             <p class="donateInformation__text"><span class="donateInformation__text_link"><a
-                        data-content="COVID-19 Giving Guide"
+                        data-content="Forbes' COVID-19 Giving Guide"
                         href="https://www.forbes.com/sites/morgansimon/2020/04/14/covid-19-giving-guide-how-to-donate-to-reach-the-most-marginalized/#70d6b9271a72"
-                        target="_blank">COVID-19
-                        Giving Guide</a></span></p>
+                        target="_blank">Forbes' COVID-19
+                        Giving Guide</a></span> highlights funds and initiatives to donate to that help the people most affected by Covid-19</p>
             <p class="donateInformation__text"><span class="donateInformation__text_link"><a
-                        data-content="How to Help Fellow Yinzers During the Pandemic"
+                        data-content="NextPittsburgh"
                         href="https://nextpittsburgh.com/features/heres-how-you-can-help-others-in-pittsburgh-during-the-coronavirus-crisis/"
-                        target="_blank">How
-                        to Help Fellow Yinzers During the Pandemic</a></span></p>
+                        target="_blank">
+                        NextPittsburgh</a></span> provides a thorough list of local groups and initiatives helping people in the Pittsburgh area</p>
         </div>
 
         <footer class="footerMain">

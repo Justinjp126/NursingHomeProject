@@ -28,7 +28,7 @@
             <li><a href="/donate" class="not-active">Donate</a></li>
             <li><a href="/contact" class="not-active">Contact</a></li>
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href="{{ url(/login) }}" id="loginButton">Login</a></li>
+            <li><a href="{{ url('/login') }}" id="loginButton">Login</a></li>
         </ul>
         <div class="menu">
             <h4>Menu</h4>
@@ -38,7 +38,7 @@
     <main class="main-login" id="swup">
         <div class="login">
             <div class="login__title">Login</div>
-            <div class="login__text">Fill out the form to login</div>
+            <div class="login__text">Fill out the form to login to an existing account</div>
         </div>
 
         <form method="POST" action="{{ route('login') }}" class="loginForm">
@@ -102,6 +102,7 @@
 
             <div class="loginContainer">
                 <input class="loginContainer__button" type="submit" value="Login">
+                <a href="/register" class="loginContainer__button" id="registerButton">Register</a>
 
                 @if (Route::has('password.request'))
                 <a class="loginContainer__text" href="{{ route('password.request') }}">Forgot Your Password?</a>

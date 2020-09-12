@@ -28,7 +28,7 @@
             <li><a href="/contact" class="not-active">Contact</a></li>
             @if(!Auth::check())
             <li><a href="/register" id="registerButton">Register</a></li>
-            <li><a href={{url("/login")}} id="loginButton">Login</a></li>
+            <li><a href="{{ url('/login') }}" id="loginButton">Login</a></li>
             @endif
             @if(Auth::check())
             <li><a href="/logout/final" class="logoutButton" type="submit">Logout</a></li>
@@ -101,32 +101,31 @@
                 <h2 class="otherInformation__title">Other Information</h2>
                 <p class="otherInformation__text"><span class="otherInformation__text_link"><a target="_blank"
                             href="https://www.idiadega.com/1-tee-3-masks-diy.html"
-                            data-content="DIY Mask from T-Shirt">DIY Mask from T-Shirt</a></span></p>
+                            data-content="Idia'Dega">Idia'Dega</a></span> has instructions for making your own
+                            DIY masks from an old T-Shirt</p>
                 <p class="otherInformation__text"><span class="otherInformation__text_link"><a target="_blank"
                             href="https://www.michaels.com/online-experiences/diy-face-masks-and-shields/diy-face-masks-and-shields"
-                            data-content="DIY
-                            Mask Instructions and Resources">DIY
-                            Mask Instructions and Resources</a></span></p>
+                            data-content="Michaels">Michaels</a> provides mask patterns, designs, and materials for DIY mask and face shield projects</span></p>
                 <p class="otherInformation__text"><span class="otherInformation__text_link"><a target="_blank"
                             href="https://med.stanford.edu/news/all-news/2020/06/stanford-scientists-contribute-to-who-mask-guidelines.html"
-                            data-content="Effectiveness
-                            of Masks">Effectiveness
-                            of Masks</a></span></p>
+                            data-content="Stanford University">Stanford University</a></span> interview on why wearing face masks is important and why they are effective</p>
             </div>
         </div>
 
         <div class="otherGroups">
             <h3 class="otherGroups__title">Other Mask Groups</h3>
             <p class="otherGroups__text"><span class="otherGroups__text_link"><a target="_blank"
-                        href="https://www.radianthall.org/" data-content="Radiant Hall">Radiant Hall</a></span></p>
+                        href="https://www.radianthall.org/maskmakerspgh" data-content="Radiant Hall">Radiant Hall</a></span> in Pittsburgh is part of Mask Makers PGH, a wonderful
+                        initiative of volunteer crafters making masks for essential workers and vulnerable communities</p>
             <p class="otherGroups__text"><span class="otherGroups__text_link"><a target="_blank"
-                        href="https://www.buildanest.org/" data-content="Build A Nest">Build A
-                        Nest</a></span></p>
+                        href="https://www.buildanest.org/covid-19-response/masks-by-nest-makers-and-artisans/" data-content="Build A Nest">Build A
+                        Nest</a></span> sells masks made by artisans worldwide. Every purchase supports artisans around the globe</p>
             <p class="otherGroups__text"><span class="otherGroups__text_link"><a target="_blank"
                         href="https://operationfacemask.com/" data-content="Operation Face Mask">Operation Face
-                        Mask</a></span></p>
+                        Mask</a></span> is an incredible local Pittsburgh initiative making masks for essential workers</p>
             <p class="otherGroups__text"><span class="otherGroups__text_link"><a target="_blank"
-                        href="https://knotzland.com/" data-content="KnotzLand">KnotzLand</a></span></p>
+                        href="https://knotzland.com/masks" data-content="KnotzLand">Knotzland</a></span> is a local Pittsburgh small business making beautiful, high-quality masks. 
+                        Every purchase donates masks to essential workers and vulnerable communities through Mask Makers PGH</p>
         </div>
 
         <footer class="footerMain">
