@@ -124,7 +124,6 @@
             </div>
 
             <input class="registerButton" type="submit" value="Register">
-            <!-- <a href="/login" class="registerButton" id="loginButton">Login</a> -->
 
         </form>
     </main>

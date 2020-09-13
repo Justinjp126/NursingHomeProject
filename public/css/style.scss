@@ -48,8 +48,10 @@
     10.2 Login Form
     10.5 Remember Me Checkbox
     10.4 Login Button 
+    10.5 Register Account
 11. Register Page
     11.1 Register Button
+    11.2 Login Account
 12. Reset Password Page
     12.1 Reset Button
 */
@@ -689,29 +691,32 @@ body {
     color: $darkerTextPurple;
     background-color: $lighterSectionPurple;
     &__title {
-        font-size: 2rem;
+        margin: 0 auto;
+        width: 90%;
+        font-size: 1.5rem;
     }
     &__svg {
         display: flex; //! Change to flex when able to
         justify-content: center;
         &_instagram {
             filter: $svgFilter;
-            width: 4rem;
-            margin: 1.5em;
+            width: 3rem;
+            margin: 1.5rem;
             transform: translateY(0);
             transition: transform 100ms ease-in;
         }
         &_twitter {
             filter: $svgFilter;
-            width: 4rem;
-            margin: 1.5em;
+            width: 3rem;
+            margin: 1.5rem;
             transform: translateY(0);
             transition: transform 100ms ease-in;
         }
         &_facebook {
+            display: none;
             filter: $svgFilter;
-            width: 4rem;
-            margin: 1.5em;
+            width: 3rem;
+            margin: 1.5rem;
             transform: translateY(0) scale(1);
             transition: transform 100ms ease-in;
         }
@@ -727,6 +732,40 @@ body {
         }
     }
 }
+
+
+@media screen and (min-width: 825px) and (max-width: 1275px) {
+    .footer, .footerMain {
+        &__title {
+            font-size: 1.8rem !important;
+        }
+        &__svg {
+            &_instagram {
+                width: 3.3rem !important;
+            }
+            &_twitter {
+                width: 3.3rem !important;
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 1275px) {
+    .footer, .footerMain {
+        &__title {
+            font-size: 2.1rem !important;
+        }
+        &__svg {
+            &_instagram {
+                width: 3.6rem !important;
+            }
+            &_twitter {
+                width: 3.6rem !important;
+            }
+        }    
+    }
+}
+
 
 // ! ---------- ! //
 // ! ABOUT PAGE ! //
@@ -1045,29 +1084,32 @@ body {
     color: $darkerTextPurple;
     background-color: $mainSectionPurple;
     &__title {
-        font-size: 2rem;
+        margin: 0 auto;
+        width: 90%;
+        font-size: 1.5rem;
     }
     &__svg {
         display: flex; //! Change to flex when able to
         justify-content: center;
         &_instagram {
             filter: $svgFilter;
-            width: 4rem;
-            margin: 1.5em;
+            width: 3rem;
+            margin: 1.5rem;
             transform: translateY(0);
             transition: transform 100ms ease-in;
         }
         &_twitter {
             filter: $svgFilter;
-            width: 4rem;
-            margin: 1.5em;
+            width: 3rem;
+            margin: 1.5rem;
             transform: translateY(0);
             transition: transform 100ms ease-in;
         }
         &_facebook {
+            display: none;
             filter: $svgFilter;
-            width: 4rem;
-            margin: 1.5em;
+            width: 3rem;
+            margin: 1.5rem;
             transform: translateY(0) scale(1);
             transition: transform 100ms ease-in;
         }
