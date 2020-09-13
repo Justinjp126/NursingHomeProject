@@ -42,8 +42,8 @@ class JoinController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
             'options' => 'required',
-            'nmasks' => 'required',
-            'mats' => 'required',
+            'nmasks' => 'required|integer|min:0',
+            'mats' => '',
             'delivery' => 'required',
             'check' => ''
         ]);
