@@ -23,7 +23,7 @@ class JoinController extends Controller
      */
     public function index($nursing_home)
     {
-        $homes = DB::select('SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from nursing_homes');
+        $homes = DB::select('SELECT Name, Needs, Address, Zip Code, Mask Type, Mask Fabric, Mailing Address, Other Information from nursing_homes');
         return view('join')->with('homes', $homes);
     }
     /**
@@ -37,7 +37,7 @@ class JoinController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
             'options' => 'required',
-            'nmasks' => 'required',
+            'nmasks' => 'required|integer|min:0',
             'mats' => '',
             'delivery' => 'required',
             'check' => ''
@@ -72,7 +72,7 @@ class JoinController extends Controller
             'delivery' => $request->delivery,
             'myself' => $help
         );
-        #Mail::to('covid19maskinitiative@gmail.com')->send(new SendMailOther($data));
+        Mail::to('covid19maskinitiative@gmail.com')->send(new SendMailOther($data));
         $user = Auth::user();
         $user->number_of_masks = ($user->number_of_masks) + $masks;
         $user->other_donations = ($user->other_donations) . " " . ($materials);
