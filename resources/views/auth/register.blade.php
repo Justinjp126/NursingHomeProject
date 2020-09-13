@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Home - Nursing Home Mask Initiative</title>
+    <title>Register - Nursing Home Mask Initiative</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
@@ -124,7 +124,7 @@
             </div>
 
             <input class="registerButton" type="submit" value="Register">
-
+            <a class="registerButton__text" href="/register">Already Have An Account?</a>
         </form>
     </main>
     <script src="../js/app.js"></script>

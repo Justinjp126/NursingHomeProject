@@ -3516,8 +3516,7 @@ video {
 // * Login Button * //
 .loginContainer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     margin-top: 2rem;
     &__button {
         font-family: inherit;
@@ -3535,6 +3534,7 @@ video {
         display: inline-block;
         min-width: 6rem;
         width: 15%;
+        margin-bottom: 1rem;
     }
 
     &__button:hover,
@@ -3545,6 +3545,7 @@ video {
     }
 
     &__text {
+        margin-top: 1rem;
         display: block;
         font-size: 1.05rem;
         color: $normalTextBlue;
@@ -3755,6 +3756,14 @@ video {
     max-width: 10rem; 
 }
 
+
+.registerButton__text {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    color: $normalTextBlue;
+    display: block;
+}
+
 .registerButton:hover,
 .registerButton:focus {
     background-color: $darkerTextPurple;
@@ -3765,11 +3774,19 @@ video {
     .registerButton {
         font-size: 1.8rem;
     }
+    .registerButton__text {
+        font-size: 1.1rem !important;
+    }
 }
 @media screen and (min-width: 1275px) {
     .registerButton {
         font-size: 2rem;
     }
+
+    .registerButton__text {
+        font-size: 1.2rem !important;
+    }
+
     .registerFlexContainer {
         display: flex;
     }

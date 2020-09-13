@@ -23,7 +23,7 @@ class JoinController extends Controller
      */
     public function index($nursing_home)
     {
-        $homes = DB::select('SELECT Name, Needs, Address, Zip Code, Mask Type, Mask Fabric, Mailing Address, Other Information from nursing_homes');
+        $homes = DB::select('SELECT Name, Needs, Address, `Zip Code`, `Mask Type`, `Mask Fabric`, `Mailing Address`, `Other Information` from nursing_homes');
         return view('join')->with('homes', $homes);
     }
     /**
